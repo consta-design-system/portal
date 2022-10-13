@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["dom", "es2015", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipDefaultLibCheck": true,
+    "jsx": "react-jsx",
+    "allowUnusedLabels": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "baseUrl": "./",
+    "paths": {
+      "##/*": ["./src/*"]
+    },
+    "plugins": [
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ]
+  },
+  "include": ["src/**/*", "scripts/**/*"],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    "*.stories.tsx",
+    "**/*.stories.tsx",
+    "*.stories.ts",
+    "**/__stories__/*",
+    "__stories__"
+  ]
+}
