@@ -17,6 +17,8 @@ env:
 
 jobs:
   deploy:
+    env:
+      REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       # Делаем checkout текущей ветки
@@ -41,7 +43,16 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn stand:deps
+        run: yarn --frozen-lockfile
+
+      - name: Clone repos
+        run: yarn clone-repos
+
+      - name: Copy deps
+        run: yarn copy-deps
+
+      - name: Install dependencies
+        run: yarn
 
       # Записываем в переменные окружения имя текущей ветки
       # Чтобы избежать конфиликтов с URL, меняем точки на _, а слеши на минусы

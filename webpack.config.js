@@ -24,6 +24,8 @@ const repos = [
   'rc-table-adapter',
   'ag-grid-adapter',
   'widgets',
+  'amcharts-map-examples',
+  'gpn-responses',
 ];
 
 const repositoriesTsRules = (repos) => {

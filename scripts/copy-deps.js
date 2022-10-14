@@ -1,12 +1,4 @@
-const { dirname, relative, resolve } = require('path');
-const {
-  readFile,
-  writeFile,
-  ensureDir,
-  readJSONSync,
-  writeJsonSync,
-  removeSync,
-} = require('fs-extra');
+const { readJSONSync, writeJsonSync } = require('fs-extra');
 
 const fg = require('fast-glob');
 
@@ -33,13 +25,13 @@ const copyDeps = async (ignore, srcPath) => {
         deps[dependenciesKeys[index]] = element;
       }
     }
-
-    removeSync(fileName);
   }
 
   const package = readJSONSync('package.json');
 
   package.dependencies = deps;
+
+  writeJsonSync('package.json', package);
 };
 
 copyDeps(['**/node_modules'], 'repositories');
