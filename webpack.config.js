@@ -90,6 +90,24 @@ module.exports = function () {
         {
           test: /\.tsx?$/,
           use: require.resolve('babel-loader'),
+          include: [
+            path.resolve(__dirname, 'node_modules', '@consta', 'stand'),
+          ],
+          resolve: {
+            alias: {
+              '##': path.resolve(
+                __dirname,
+                'node_modules',
+                '@consta',
+                'stand',
+                'src',
+              ),
+            },
+          },
+        },
+        {
+          test: /\.tsx?$/,
+          use: require.resolve('babel-loader'),
           include: [path.resolve(__dirname, 'node_modules')],
         },
         {
@@ -166,11 +184,7 @@ module.exports = function () {
                               });
                         `;
                 },
-                plugins: [
-                  '@svgr/plugin-svgo',
-                  '@svgr/plugin-jsx',
-                  '@svgr/plugin-prettier',
-                ],
+                plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
                 dimensions: false,
                 svgo: true,
               },
