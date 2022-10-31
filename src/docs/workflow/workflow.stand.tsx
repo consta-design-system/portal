@@ -1,7 +1,7 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Порядок работы с Consta',
+  title: 'Как работать с Consta',
   id: 'workflow',
   group: 'workflow',
   order: 10,
