@@ -1,14 +1,12 @@
 import './AboutData.css';
 
 import { Link } from '@consta/stand/src/componets/Link';
+import { cnDocsDecorator } from '@consta/uikit/__internal__/src/uiKit/components/DocsDecorator/DocsDecorator';
+import * as wp from '@consta/uikit/__internal__/src/uiKit/whitepaper/whitepaper';
+import { cn } from '@consta/uikit/__internal__/src/utils/bem';
+import { cnMixSpace } from '@consta/uikit/MixSpace';
+import { Text } from '@consta/uikit/Text';
 import React from 'react';
-
-import { cnMixSpace } from '##/mixs/MixSpace/MixSpace';
-
-import { Text } from '../../../../../src/components/Text/Text';
-import { cnDocsDecorator } from '../../../../../src/uiKit/components/DocsDecorator/DocsDecorator';
-import * as wp from '../../../../../src/uiKit/whitepaper/whitepaper';
-import { cn } from '../../../../../src/utils/bem';
 
 const cnAboutData = cn('AboutData');
 

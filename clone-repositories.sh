@@ -14,3 +14,4 @@ git clone -b master https://${REPO_ACCESS_TOKEN}@github.com/consta-design-system
 git clone -b master https://${REPO_ACCESS_TOKEN}@github.com/consta-design-system/widgets.git ./repositories/widgets
 git clone -b master https://${REPO_ACCESS_TOKEN}@github.com/consta-design-system/amcharts-map-examples.git ./repositories/amcharts-map-examples
 git clone -b master https://${REPO_ACCESS_TOKEN}@github.com/consta-design-system/gpn-responses.git ./repositories/gpn-responses
+git clone -b master https://${REPO_ACCESS_TOKEN}@github.com/consta-design-system/icons.git ./repositories/icons

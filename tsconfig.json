@@ -33,6 +33,8 @@
     "**/*.stories.tsx",
     "*.stories.ts",
     "**/__stories__/*",
-    "__stories__"
+    "__stories__",
+    "repositories",
+    "**/repositories/*"
   ]
 }
