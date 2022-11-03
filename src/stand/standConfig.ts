@@ -3,8 +3,8 @@ import { createConfig } from '@consta/stand';
 import image from './ConstaImage.png';
 import description from './description.mdx';
 
-export const { createStand, createPage } = createConfig({
-  title: 'Общая документация',
+export const { createStand } = createConfig({
+  title: 'Документация дизайн-системы',
   id: 'portal',
   groups: [
     {
