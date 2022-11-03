@@ -26,7 +26,7 @@
     "format:svg": "prettier --write '**/*.svg' --parser html",
     "pre-push": "rm -rf ./repositories && yarn run tsc-dry-run",
     "pre-commit": "yarn run lint-staged",
-    "test": "yarn tsc-dry-run && yarn unit",
+    "test": "yarn tsc-dry-run",
     "unit": "jest",
     "unit:watch": "jest --watch",
     "unit:clear": "jest --clearCache",
