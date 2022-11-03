@@ -4,7 +4,7 @@ import image from './ConstaImage.png';
 import description from './description.mdx';
 
 export const { createStand } = createConfig({
-  title: 'Общая документация',
+  title: 'Документация дизайн-системы',
   id: 'portal',
   groups: [
     {

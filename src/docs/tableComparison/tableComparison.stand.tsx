@@ -1,9 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Как работать с Consta',
-  id: 'workflow',
+  title: 'Какую таблицу выбрать',
+  id: 'tableComparison',
   group: 'workflow',
-  order: 10,
-  visibleOnHeader: true,
+  order: 70,
 });
