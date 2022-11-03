@@ -1452,10 +1452,10 @@
   resolved "https://registry.yarnpkg.com/@consta/header/-/header-1.0.0.tgz#95e3db57857a10aad4c5214c39884630495fc970"
   integrity sha512-JM/JWRxsbBnh2a8Wn99ly8ub0Rrwf17IolU3TFTJd8uj1230n3P5kbdfPXdVMnq38i16k1fD6ubxenLN0612YQ==
 
-"@consta/stand@^0.0.58":
-  version "0.0.58"
-  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.58.tgz#e86ac2cc1cb3a3b349982af8fc27714394bc9d19"
-  integrity sha512-y1YbkbytpobyR2F9mSIOMOr9LinaHmNkieFJq//rG7Pv4pxv+s97W5x8A3y8eY90woo0sXPrGmYU2PGzUZ4b5g==
+"@consta/stand@^0.0.59":
+  version "0.0.59"
+  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.59.tgz#1058144b81e3c3c3ba0f8b2c51e908c30f2e92d4"
+  integrity sha512-IsnqzBkGWiDd+vymFKUOHyQvdhrg/r0XCo5dWeZ23FIFxRbp0zOoR2DgN8AJH1nS6HFP3LBakjV2jsoYsBDNYA==
   dependencies:
     "@bem-react/classname" "^1.5.12"
     "@bem-react/classnames" "^1.3.10"
@@ -1528,6 +1528,21 @@
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-4.1.0.tgz#43349105dd614880741aa2b6ed3d6d4a8ba5b009"
   integrity sha512-MSd8LEgtGc98rxLQqN4IshYTguENRPWe6RZo1vcigVoZkc2I9aTDuML8wKxKzDXSFle7aPP9g9rr7g/xabBD8Q==
+  dependencies:
+    "@bem-react/classname" "^1.5.12"
+    "@bem-react/classnames" "^1.3.10"
+    compute-scroll-into-view "^1.0.17"
+    date-fns "^2.29.1"
+    focus-trap-react "8.7.0"
+    imask "^6.4.2"
+    react-dropzone "11.3.4"
+    react-textarea-autosize "^8.3.4"
+    react-transition-group "^4.4.5"
+
+"@consta/uikit@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-4.2.2.tgz#a281886aebac0d04890b9604b4c5cae9d9b5bf57"
+  integrity sha512-5aDTDf0xlIx0VzB8kc42+9SGHUwS2lTIUj8BStFhlurT94dogv1BGEqa0CRJlzVix3pq1z/RFthUrGy1b+ZA9w==
   dependencies:
     "@bem-react/classname" "^1.5.12"
     "@bem-react/classnames" "^1.3.10"

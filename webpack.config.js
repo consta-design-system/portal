@@ -26,6 +26,7 @@ const repos = [
   'widgets',
   'amcharts-map-examples',
   'gpn-responses',
+  'icons',
 ];
 
 const repositoriesTsRules = (repos) => {
