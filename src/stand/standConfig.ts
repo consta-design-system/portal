@@ -24,6 +24,10 @@ export const { createStand, createPage } = createConfig({
       id: 'custom',
     },
     {
+      title: 'Портал',
+      id: 'portal',
+    },
+    {
       title: 'Правила и справочники',
       id: 'reference',
     },

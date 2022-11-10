@@ -1,8 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Документация для компонента',
-  id: 'docs',
+  title: 'Текст, стиль, формат',
+  id: 'docsStyle',
   group: 'portal',
-  order: 20,
+  order: 40,
 });
