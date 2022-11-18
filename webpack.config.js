@@ -9,6 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const isEnvProduction = process.env.NODE_ENV === 'production';
 
@@ -243,6 +244,10 @@ module.exports = function () {
       }),
 
       new CssMinimizerPlugin(),
+
+      new FaviconsWebpackPlugin(
+        path.resolve(__dirname, 'public', 'favicon.svg'),
+      ),
     ].filter(Boolean),
 
     output: {
