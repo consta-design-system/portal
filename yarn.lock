@@ -1452,10 +1452,10 @@
   resolved "https://registry.yarnpkg.com/@consta/header/-/header-1.0.0.tgz#95e3db57857a10aad4c5214c39884630495fc970"
   integrity sha512-JM/JWRxsbBnh2a8Wn99ly8ub0Rrwf17IolU3TFTJd8uj1230n3P5kbdfPXdVMnq38i16k1fD6ubxenLN0612YQ==
 
-"@consta/stand@^0.0.60":
-  version "0.0.60"
-  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.60.tgz#55908e11d97cfa36044acf44c9b7037d69da2041"
-  integrity sha512-fthvCaNbOpdG5dRIzA7m19KaGm7xnrzI6klLOgXqwM/2OSG6vjDOwZ5AHaNfYEL8KtHrWAQAbvN8a3YWgSBdJw==
+"@consta/stand@^0.0.67":
+  version "0.0.67"
+  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.67.tgz#5432d936739600260df673f686619f0acb7f9db3"
+  integrity sha512-93SLq0VWPcZxL5Qgr0QH3ptIQ3E+QMsv+BRRqDvnlRO4UiQ2O0+Cg852QH7HN2Ul++ZtkqmxaqZRU2tycXAzgw==
   dependencies:
     "@bem-react/classname" "^1.5.12"
     "@bem-react/classnames" "^1.3.10"
@@ -1465,8 +1465,9 @@
     "@mdx-js/react" "^2.1.1"
     "@oclif/command" "^1.8.16"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.3"
-    "@reatom/core" "^2.0.20"
-    "@reatom/react" "^2.0.19"
+    "@reatom/core" "^3.1.3"
+    "@reatom/npm-react" "^3.1.1"
+    "@reatom/primitives" "^3.1.0"
     "@svgr/core" "^6.2.1"
     "@svgr/plugin-jsx" "^6.3.1"
     "@svgr/plugin-prettier" "^6.3.1"
@@ -1498,12 +1499,12 @@
     prompts "^2.4.2"
     react-app-polyfill "^3.0.0"
     react-dev-utils "^12.0.0"
-    react-dom "^18.0.0"
     react-highlight "^0.14.0"
     react-refresh "^0.11.0"
     react-router5 "^8.0.1"
     react-syntax-highlighter "^15.5.0"
     react-transition-group "^4.4.2"
+    reatom-router5 "^3.0.0"
     remark-gfm "^1.0.0"
     resolve "^1.20.0"
     resolve-url-loader "^4.0.0"
@@ -2288,15 +2289,40 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
   integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
 
-"@reatom/core@^2.0.20":
-  version "2.0.22"
-  resolved "https://registry.yarnpkg.com/@reatom/core/-/core-2.0.22.tgz#8f55ee9a2c01fa932cbc13a21d033b697c2a8fa3"
-  integrity sha512-t567/VDkFRb2cBDWiJpr5QSMIpgE082S21ITzNGQfVLBCuw7DEWYscVvqzfi2XHYAFO+02hsFCCFhtMU9w4Jog==
+"@reatom/core@>=3.1.0", "@reatom/core@^3.1.3":
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/@reatom/core/-/core-3.1.6.tgz#550e8bdc5affa815a54034927a2d514000a4f9f0"
+  integrity sha512-IZ//Q54yQDYjLi+HJQKLvyi+DvM0LM5oHTmzTfzXEdl6PXFkXkZY52dItOblZk1wggCJZODSy8mYI+YXymb/iw==
 
-"@reatom/react@^2.0.19":
-  version "2.0.19"
-  resolved "https://registry.yarnpkg.com/@reatom/react/-/react-2.0.19.tgz#2f7575167248a8762735b7955e1f7eb57f6bd2c3"
-  integrity sha512-vwjM1IaDL6qZeYTP2yWqjQhMrjCLvmrl51nzU8lm3nQmILvwZlFzXkooNQc6UpaKJHs2Q8Rrgd7Xsufi9OjBtg==
+"@reatom/effects@>=3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@reatom/effects/-/effects-3.1.0.tgz#d2e65c8d1d867ef118dd5dfb09b3c63c965a4419"
+  integrity sha512-kYcLIWXkQJL4Ip8/LyMzJd2spPtGJ7YkEndz7nz3ju1IvWv33QsYornHl9roR6UczuVVd5DWHI573rjytt8K4A==
+  dependencies:
+    "@reatom/core" ">=3.1.0"
+
+"@reatom/lens@>=3.1.0":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@reatom/lens/-/lens-3.1.4.tgz#df21b0119bef6572d5a40fb69bcedaa48d09e998"
+  integrity sha512-URP/JCTdsdHAJ5buQwled14UbX23EaSYOiNT8stxc53z+vzXx4CszSBOep9Y8iOjNj9ii/yt7Io8I05mMtXWhg==
+  dependencies:
+    "@reatom/core" ">=3.1.0"
+    "@reatom/effects" ">=3.1.0"
+
+"@reatom/npm-react@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@reatom/npm-react/-/npm-react-3.1.1.tgz#75beb2b2b968c5978e73bb5b7bb5b1d64d43644f"
+  integrity sha512-xjzGeVW6VypVAo1eDuZ6F8IE9cAJkZFH5MxpjIwL4Jrw/2pcKrLl4V53ml4LRIKFIJcREPGUuusRajnm4/P8Rg==
+  dependencies:
+    "@reatom/core" ">=3.1.0"
+    "@reatom/lens" ">=3.1.0"
+
+"@reatom/primitives@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@reatom/primitives/-/primitives-3.1.0.tgz#e3763c1c9e60bb0727865ee663b7b155997b15df"
+  integrity sha512-FLwpZwmtepkkuhIYi75VE6heIfmv1NlzXDl1mDRkwh43Gdn1gYjxKn/6BfRbSb+Vr3ungprR9Tdrm9Ekp0wMSQ==
+  dependencies:
+    "@reatom/core" ">=3.1.0"
 
 "@restart/hooks@^0.3.25":
   version "0.3.27"
@@ -15020,6 +15046,11 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+reatom-router5@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/reatom-router5/-/reatom-router5-3.0.1.tgz#f1c70f18cb61d6e2f924f7cf82575334f5dfdc6b"
+  integrity sha512-CMgaeULc0DEXeV9NFslNjuUbm/9tT6iS5Fn+1yVgxQfm1HCmbJ2UA8Vm3DUqjGguXQXSK+R7mKCjmNPAnfTYpQ==
 
 rechoir@^0.7.0:
   version "0.7.1"
