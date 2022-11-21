@@ -1452,10 +1452,10 @@
   resolved "https://registry.yarnpkg.com/@consta/header/-/header-1.0.0.tgz#95e3db57857a10aad4c5214c39884630495fc970"
   integrity sha512-JM/JWRxsbBnh2a8Wn99ly8ub0Rrwf17IolU3TFTJd8uj1230n3P5kbdfPXdVMnq38i16k1fD6ubxenLN0612YQ==
 
-"@consta/stand@^0.0.67":
-  version "0.0.67"
-  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.67.tgz#5432d936739600260df673f686619f0acb7f9db3"
-  integrity sha512-93SLq0VWPcZxL5Qgr0QH3ptIQ3E+QMsv+BRRqDvnlRO4UiQ2O0+Cg852QH7HN2Ul++ZtkqmxaqZRU2tycXAzgw==
+"@consta/stand@^0.0.70":
+  version "0.0.70"
+  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.70.tgz#43c9701400175559700dae7ef2f76682a9419eda"
+  integrity sha512-hmXBIJPGsCkoK/wM9gOBfURZSNgzkvxZqJ8Sq0z31/LoTsCoc2hPobB72CHra+OQqkQX80YskdejONDM8z1xcA==
   dependencies:
     "@bem-react/classname" "^1.5.12"
     "@bem-react/classnames" "^1.3.10"
@@ -1466,6 +1466,7 @@
     "@oclif/command" "^1.8.16"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.3"
     "@reatom/core" "^3.1.3"
+    "@reatom/hooks" "^3.1.0"
     "@reatom/npm-react" "^3.1.1"
     "@reatom/primitives" "^3.1.0"
     "@svgr/core" "^6.2.1"
@@ -1490,6 +1491,8 @@
     css-minimizer-webpack-plugin "^3.4.1"
     dotenv "^10.0.0"
     dotenv-expand "^5.1.0"
+    favicons "^7.0.2"
+    favicons-webpack-plugin "^6.0.0-alpha.2"
     file-loader "^6.2.0"
     fs-extra "^10.0.1"
     github-release-notes "^0.17.3"
@@ -2298,6 +2301,13 @@
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@reatom/effects/-/effects-3.1.0.tgz#d2e65c8d1d867ef118dd5dfb09b3c63c965a4419"
   integrity sha512-kYcLIWXkQJL4Ip8/LyMzJd2spPtGJ7YkEndz7nz3ju1IvWv33QsYornHl9roR6UczuVVd5DWHI573rjytt8K4A==
+  dependencies:
+    "@reatom/core" ">=3.1.0"
+
+"@reatom/hooks@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@reatom/hooks/-/hooks-3.1.0.tgz#3499b206e0a48fad3428eca113c186e77ea6c483"
+  integrity sha512-VbhuQwGC0J27CNyC4uIqPFEuW/cc2MrCXMDiX4GD0Ug9KmOvUny9xECo8094nJpSIg2onJAmPcpuJIYCGyfEKw==
   dependencies:
     "@reatom/core" ">=3.1.0"
 
@@ -3440,6 +3450,11 @@
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
   integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
+
+"@types/uuid@^8.3.4":
+  version "8.3.4"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.4.tgz#bd86a43617df0594787d38b735f55c805becf1bc"
+  integrity sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==
 
 "@types/vfile-message@*":
   version "2.0.0"
@@ -18036,6 +18051,11 @@ uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
+uuid@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
+  integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
 uvu@^0.5.0:
   version "0.5.6"

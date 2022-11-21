@@ -1,0 +1,46 @@
+.portal--ThemeControls {
+  @media (min-width: 1024px) {
+    --radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  &-Example {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &-Settings {
+    justify-self: end;
+    width: 100%;
+    max-width: 500px;
+
+    @media (min-width: 1024px) {
+      padding-left: var(--space-xl);
+    }
+
+    @media (min-width: 1200px) {
+      padding-left: var(--space-3xl);
+    }
+  }
+
+  &-PresetList {
+    background-color: var(--color-bg-default);
+  }
+
+  &-ChoiceGroup {
+    background: var(--color-bg-default);
+  }
+
+  &-Item {
+    &_type_size {
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+  }
+}

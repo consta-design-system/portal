@@ -1,0 +1,208 @@
+.portal--About {
+  display: block;
+
+  &-Lead {
+    align-items: center;
+  }
+}
+
+.portal--LinksToLibrary {
+  --radius: 12px;
+  overflow: hidden;
+  font-size: var(--size-text-xl);
+
+  & > svg {
+    width: 100%;
+    margin: var(--space-xs) 0;
+  }
+
+  &-Cards {
+    display: block;
+
+    @media (min-width: 720px) {
+      display: grid;
+      border-radius: var(--radius);
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: var(--space-l);
+    }
+  }
+
+  &-Item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 10em;
+    padding: var(--space-xl) var(--space-l);
+    border-radius: var(--radius);
+    text-decoration: none;
+
+    &:not(:last-child) {
+      margin-bottom: var(--space-m);
+    }
+
+    &_to {
+      &_Storybook {
+        background-color: var(--color-bg-link);
+      }
+
+      &_Figma {
+        background-color: var(--color-bg-secondary);
+      }
+
+      &_Github {
+        background-color: var(--color-bg-default);
+      }
+
+      @media (min-width: 720px) {
+        &_Figma,
+        &_Github {
+          min-height: 20em;
+        }
+      }
+    }
+
+    @media (min-width: 720px) {
+      /* padding: var(--space-2xl); */
+      border-radius: var(--radius);
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      /* padding: var(--space-3xl); */
+      border-radius: var(--radius);
+    }
+  }
+
+  /* &-Text {
+    margin-bottom: var(--space-2xl);
+  } */
+
+  &-Footer {
+    margin-top: var(--space-2xl);
+  }
+
+  & &-Logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  &-More,
+  &-Arrow {
+    transition: transform 0.3s;
+  }
+
+  &-Item:hover &-Arrow {
+    transform: translateX(var(--space-m));
+  }
+
+  &-Item:hover &-Title::before {
+    transform: scaleX(1);
+  }
+
+  @media (min-width: 720px) {
+    --radius: 16px;
+
+    & > svg {
+      width: 40%;
+    }
+  }
+}
+
+.portal--VideoButton {
+  --bg: var(--color-control-bg-primary);
+  --content: var(--color-control-typo-primary);
+  --playSize: 1em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  appearance: none;
+  border: none;
+  box-shadow: none;
+  font-size: var(--size-text-m);
+  cursor: pointer;
+
+  @media (min-width: 1024px) {
+    --playSize: 2.5em;
+    display: block;
+    max-width: 13em;
+  }
+
+  &-Play {
+    position: relative;
+    float: left;
+    width: 5em;
+    height: auto;
+    margin: 0 var(--space-m) 0 0;
+    background: var(--bg);
+    border-radius: 50%;
+    transition: background 0.24s, transform 0.24s;
+
+    &::before {
+      content: '';
+      float: left;
+      padding-top: 100%;
+    }
+
+    @media (min-width: 1024px) {
+      width: 100%;
+      margin: 0 0 var(--space-l);
+    }
+  }
+
+  &-Triangle {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    width: var(--playSize);
+    height: var(--playSize);
+    background-color: var(--content);
+    border-top-right-radius: 30%;
+    text-align: left;
+    transform: translate(-50%, -50%) rotate(30deg) skewX(-30deg) scale(1, 0.866);
+    filter:
+      drop-shadow(10px 20px 30px rgba(var(--color-shadow-modal-1), 0.1))
+      drop-shadow(8px 14px 20px rgba(var(--color-shadow-modal-2), 0.12));
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: var(--playSize);
+      height: var(--playSize);
+      background-color: inherit;
+      border-top-right-radius: 30%;
+    }
+
+    &::before {
+      transform:
+        rotate(-135deg) skewX(-45deg) scale(1.414, 0.707)
+        translate(0, -50%);
+    }
+
+    &::after {
+      transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+    }
+  }
+
+  &-Content {
+    color: var(--color-control-typo-secondary);
+    transition: color 0.32s;
+  }
+
+  &:hover &-Play {
+    --bg: var(--color-control-bg-primary-hover);
+    --content: var(--color-control-typo-primary-hover);
+    transform: scale(1.05);
+  }
+
+  &:hover &-Content {
+    color: var(--color-control-typo-secondary-hover);
+  }
+}

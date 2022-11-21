@@ -9,5 +9,5 @@ module.exports = {
     'node_modules/@consta/stand/templates/lazydocs.tsx.template',
   standsPath: 'node_modules/@consta/stand/src/stands',
   standTabs: ['dev', 'design'],
-  // routesPath: '/src/modules/router',
+  routesPath: '/src/modules/router',
 };

@@ -1,0 +1,83 @@
+.portal--ShowroomSlider {
+  --shift: 0;
+  position: relative;
+  width: 100%;
+  padding: 0 0 var(--space-6xl);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    width: 24px;
+    height: 80%;
+    background: var(--shadow-layer);
+    border-radius: 50%;
+    filter: blur(16px);
+  }
+
+  &::before {
+    left: -8px;
+  }
+
+  &::after {
+    right: -8px;
+  }
+
+  &-Row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: var(--control-height-m);
+
+    &:not(:last-child) {
+      margin-bottom: var(--col-gap-two-thirds);
+    }
+
+    &:nth-child(2n) {
+      .portal--ShowroomSlider-Group {
+        animation-direction: reverse;
+      }
+    }
+  }
+
+  &-Group {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    animation-name: Consta--ShowroomSlider-Animate;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    will-change: scroll-position;
+    animation-fill-mode: both;
+
+    & > * {
+      margin-right: var(--col-gap-third);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &_scrollDirection {
+    &_stop {
+      & .portal--ShowroomSlider-Group {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+@keyframes Consta--ShowroomSlider-Animate {
+  from {
+    transform: translate3d(0%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+}

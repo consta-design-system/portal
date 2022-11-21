@@ -151,7 +151,7 @@ module.exports = function () {
           include: [path.resolve(__dirname, 'node_modules')],
         },
         {
-          test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+          test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.pdf$/],
           loader: require.resolve('url-loader'),
           options: {
             limit: false,
