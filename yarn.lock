@@ -1452,10 +1452,10 @@
   resolved "https://registry.yarnpkg.com/@consta/header/-/header-1.0.0.tgz#95e3db57857a10aad4c5214c39884630495fc970"
   integrity sha512-JM/JWRxsbBnh2a8Wn99ly8ub0Rrwf17IolU3TFTJd8uj1230n3P5kbdfPXdVMnq38i16k1fD6ubxenLN0612YQ==
 
-"@consta/stand@^0.0.70":
-  version "0.0.70"
-  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.70.tgz#43c9701400175559700dae7ef2f76682a9419eda"
-  integrity sha512-hmXBIJPGsCkoK/wM9gOBfURZSNgzkvxZqJ8Sq0z31/LoTsCoc2hPobB72CHra+OQqkQX80YskdejONDM8z1xcA==
+"@consta/stand@^0.0.71":
+  version "0.0.71"
+  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.71.tgz#e82d77337ea44afd8a49fe89d2111bdf15fececa"
+  integrity sha512-lAjLaTb/upl+Mi0Ve0Bzb2aER4UIxxWcPqVXIJOiRgJffUi9Hax2ya0QA/AQxK09GUtlO/Bfq9k8cNI4r07lKA==
   dependencies:
     "@bem-react/classname" "^1.5.12"
     "@bem-react/classnames" "^1.3.10"
@@ -1465,7 +1465,7 @@
     "@mdx-js/react" "^2.1.1"
     "@oclif/command" "^1.8.16"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.3"
-    "@reatom/core" "^3.1.3"
+    "@reatom/core" "^3.1.8"
     "@reatom/hooks" "^3.1.0"
     "@reatom/npm-react" "^3.1.1"
     "@reatom/primitives" "^3.1.0"
@@ -2292,10 +2292,15 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
   integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
 
-"@reatom/core@>=3.1.0", "@reatom/core@^3.1.3":
+"@reatom/core@>=3.1.0":
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/@reatom/core/-/core-3.1.6.tgz#550e8bdc5affa815a54034927a2d514000a4f9f0"
   integrity sha512-IZ//Q54yQDYjLi+HJQKLvyi+DvM0LM5oHTmzTfzXEdl6PXFkXkZY52dItOblZk1wggCJZODSy8mYI+YXymb/iw==
+
+"@reatom/core@^3.1.8":
+  version "3.1.8"
+  resolved "https://registry.yarnpkg.com/@reatom/core/-/core-3.1.8.tgz#a1b00b9263694818bdd8712e2ca11c0533b7872e"
+  integrity sha512-HVOvYn1vf+qSZl7MgxC1UaIbWLcthwSMu+FSA6R3HySgISxaTHXP10U49vjqSB8VDDMizmvy3za3gzi4zWRBlg==
 
 "@reatom/effects@>=3.1.0":
   version "3.1.0"
