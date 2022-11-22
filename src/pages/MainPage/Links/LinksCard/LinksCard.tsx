@@ -72,7 +72,7 @@ export const LinksCard: React.FC<Props> = (props) => {
             size="l"
             as="span"
           >
-            Consta Kit
+            Смотреть
           </Text>
           <IconOpenInNew
             className={cnLinksCard('Arrow')}

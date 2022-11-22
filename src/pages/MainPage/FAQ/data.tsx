@@ -199,7 +199,7 @@ export const questions = [
 
       return (
         <Text as="p" size="xl">
-          Отлично, отправьте им ссылку на
+          Отлично, отправьте им ссылку на{' '}
           <Text
             as="a"
             view="link"
