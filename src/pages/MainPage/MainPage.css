@@ -1,0 +1,7 @@
+.portal--MainPage {
+  background-color: var(--color-bg-default);
+
+  &-Text {
+    padding: 20px;
+  }
+}

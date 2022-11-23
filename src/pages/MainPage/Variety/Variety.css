@@ -1,0 +1,9 @@
+.portal--Variety {
+  &-Title {
+    max-width: 20ch;
+  }
+
+  &-Showroom {
+    position: relative;
+  }
+}

@@ -1,0 +1,21 @@
+.portal--SnackBarContainer {
+  position: fixed;
+  z-index: 110;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--space-xs);
+  pointer-events: none;
+
+  & .SnackBar {
+    &-Item {
+      pointer-events: auto;
+    }
+  }
+
+  @media (min-width: 420px) {
+    width: 340px;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+.portal--Footer {
+  background-color: var(--color-bg-secondary);
+
+  &-Copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-bg-border);
+
+    @media (max-width: 720px) {
+      flex-direction: column;
+
+      & > a {
+        margin-bottom: var(--space-l);
+      }
+    }
+  }
+}

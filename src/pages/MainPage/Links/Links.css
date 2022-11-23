@@ -1,0 +1,89 @@
+.portal--Links {
+  &-List {
+    --radius: 12px;
+    overflow: hidden;
+    margin-right: calc(-1 * var(--space-xs));
+    margin-left: calc(-1 * var(--space-xs));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-layer);
+
+    @media (min-width: 720px) {
+      --radius: 16px;
+    }
+  }
+
+  & &-Logo {
+    width: 32px;
+    height: 32px;
+    margin-bottom: var(--space-2xl);
+    transform: translateX(-10%);
+
+    @media (min-width: 720px) {
+      position: absolute;
+      left: var(--space-xl);
+      width: 48px;
+      height: 48px;
+    }
+
+    @media (min-width: 1024px) {
+      position: static;
+    }
+  }
+
+  &-Card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-xl) var(--space-l) var(--space-l);
+    background-color: var(--bg-color);
+    text-decoration: none;
+
+    @media (min-width: 720px) {
+      padding: var(--space-2xl) var(--space-xl) var(--space-2xl) 33%;
+    }
+
+    @media (min-width: 1024px) {
+      padding: var(--space-2xl) var(--space-xl) var(--space-2xl);
+    }
+
+    @media (min-width: 1200px) {
+      padding: var(--space-xl) var(--space-2xl) var(--space-2xl);
+    }
+
+    &_view_Storybook {
+      --bg-color: var(--color-bg-link);
+    }
+
+    &_view_Figma {
+      --bg-color: var(--color-bg-secondary);
+    }
+
+    &_view_Github {
+      --bg-color: var(--color-bg-default);
+    }
+  }
+
+  &-CardFooter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-More,
+  &-Arrow {
+    transition: transform 0.3s;
+  }
+
+  &-Card:hover &-Arrow {
+    transform: translateX(var(--space-m));
+  }
+
+  &-Card:hover &-CardTitle span {
+    background-size: 1px 1em;
+    box-shadow: inset 0 -0.12em var(--color-bg-ghost);
+  }
+
+  &-Card:hover &-Title::before {
+    transform: scaleX(1);
+  }
+}

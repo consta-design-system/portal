@@ -1,0 +1,8 @@
+.portal--HeaderContainer {
+  & .portal--Header {
+    &-Logo {
+      --logo-color-1: var(--logo-color);
+      --logo-color-2: var(--logo-color);
+    }
+  }
+}

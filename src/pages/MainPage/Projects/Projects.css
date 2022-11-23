@@ -1,0 +1,50 @@
+.portal--Projects {
+  --radius: 12px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-right: calc(-1 * var(--space-xs));
+  margin-left: calc(-1 * var(--space-xs));
+  padding: var(--space-4xl) var(--space-l);
+  background-color: var(--color-bg-default);
+  border-radius: var(--radius);
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url(../../../images/Blured-prj.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: cover;
+    filter: blur(0);
+    transition: filter 1s;
+  }
+
+  &-Description {
+    max-width: 46ch;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &:hover::before {
+    filter: blur(24px);
+  }
+
+  @media (min-width: 720px) {
+    --radius: 16px;
+  }
+
+  &-Button {
+    width: 100%;
+
+    @media (min-width: 720px) {
+      width: 320px;
+    }
+  }
+}

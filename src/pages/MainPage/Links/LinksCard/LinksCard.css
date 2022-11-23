@@ -1,0 +1,111 @@
+.portal--LinksCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-xl) var(--space-l) var(--space-l);
+  background-color: var(--bg-color);
+  text-decoration: none;
+
+  @media (min-width: 720px) {
+    padding: var(--space-2xl) var(--space-xl) var(--space-2xl) 33%;
+  }
+
+  @media (min-width: 1024px) {
+    padding: var(--space-2xl) var(--space-xl) var(--space-2xl);
+  }
+
+  @media (min-width: 1200px) {
+    padding: var(--space-xl) var(--space-2xl) var(--space-2xl);
+  }
+
+  &_view {
+    &_storybook {
+      --bg-color: var(--color-bg-link);
+    }
+
+    &_figma {
+      --bg-color: var(--color-bg-secondary);
+    }
+
+    &_github {
+      --bg-color: var(--color-bg-default);
+    }
+  }
+
+  &-Footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-Brick {
+    display: inherit;
+    justify-content: space-between;
+
+    /* vertical-align: center; */
+    padding: var(--space-s);
+    border-radius: var(--control-radius);
+    text-decoration: none;
+
+    &:first-child {
+      /* margin-bottom: var(--space-s); */
+    }
+
+    &:hover {
+      background-color: var(--color-control-bg-ghost-hover);
+    }
+
+    /* &-More,
+    .portal--LinksCard-Arrow {
+      transition: transform 0.3s;
+    }
+
+    &:hover .portal--LinksCard-Arrow {
+      transform: translateX(var(--space-m));
+    } */
+  }
+
+  &-Arrow {
+    margin-right: var(--space-2xs);
+  }
+
+  /* &-More,
+  &-Arrow {
+    transition: transform 0.3s;
+  }
+
+  &:hover &-Arrow {
+    transform: translateX(var(--space-m));
+  } */
+
+  &:hover &-Title span {
+    background-size: 1px 1em;
+    box-shadow: inset 0 -0.12em var(--color-bg-ghost);
+  }
+
+  &:hover &-Title::before {
+    transform: scaleX(1);
+  }
+
+  &-Logo {
+    width: 32px;
+    height: 32px;
+    margin-bottom: var(--space-2xl);
+    transform: translateX(-10%);
+
+    @media (min-width: 720px) {
+      position: absolute;
+      left: var(--space-xl);
+      width: 48px;
+      height: 48px;
+    }
+
+    @media (min-width: 1024px) {
+      position: static;
+    }
+  }
+
+  &-Title {
+    max-width: 18ch;
+  }
+}

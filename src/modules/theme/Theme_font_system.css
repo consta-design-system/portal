@@ -1,0 +1,16 @@
+.Theme_font_system {
+  --font-primary:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Helvetica Neue',
+    'Roboto',
+    sans-serif;
+  --font-mono:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
+  font-family: var(--font-primary);
+}
