@@ -165,11 +165,10 @@ module.exports = function () {
               loader: '@svgr/webpack',
               options: {
                 template: (
-                  { template },
-                  opts,
                   { imports, componentName, props, jsx, exports },
+                  { tpl },
                 ) => {
-                  return template.ast`
+                  return tpl`
                               ${imports}
                               import { createIcon } from '@consta/uikit/createIcon';
 

@@ -8,6 +8,6 @@ module.exports = {
   lazyMdxTemaplatePath:
     'node_modules/@consta/stand/templates/lazydocs.tsx.template',
   standsPath: 'node_modules/@consta/stand/src/stands',
-  standTabs: ['dev', 'design'],
+  standTabs: ['dev', 'design', 'use'],
   routesPath: '/src/modules/router',
 };
