@@ -25,40 +25,47 @@ type Props<ITEM> = PropsWithHTMLAttributesAndRef<
   HTMLDivElement
 >;
 
-type PresetList = <ITEM>(props: Props<ITEM>) => React.ReactElement | null;
+type PresetListComponent = <ITEM>(
+  props: Props<ITEM>,
+) => React.ReactElement | null;
 
-export const PresetList: PresetList = React.forwardRef((props, ref) => {
-  const {
-    value = null,
-    items,
-    getLabel,
-    onChange,
-    className,
-    getBrandColor,
-    ...otherProps
-  } = props;
+export const PresetList: PresetListComponent = React.forwardRef(
+  (props, ref) => {
+    const {
+      value = null,
+      items,
+      getLabel,
+      onChange,
+      className,
+      getBrandColor,
+      ...otherProps
+    } = props;
 
-  const { getOnChange, getChecked } = useChoiceGroup<
-    typeof items[number],
-    React.MouseEvent<HTMLButtonElement, MouseEvent>
-  >({ value, getKey: getLabel, callBack: onChange, multiple: false });
+    const { getOnChange, getChecked } = useChoiceGroup<
+      typeof items[number],
+      React.MouseEvent<HTMLButtonElement, MouseEvent>
+    >({ value, getKey: getLabel, callBack: onChange, multiple: false });
 
-  return (
-    <div {...otherProps} ref={ref} className={cnPresetList(null, [className])}>
-      <div className={cnPresetList('Wrapper')}>
-        {items.map((item) => (
-          <button
-            className={cnPresetList('Item', { checked: getChecked(item) })}
-            key={getLabel(item)}
-            onClick={getOnChange(item)}
-            style={{ ['--brandColor' as any]: getBrandColor(item) }}
-            type="button"
-          >
-            {getLabel(item)}
-          </button>
-        ))}
-        <div className={cnPresetList('LastItem')} />
+    return (
+      <div
+        {...otherProps}
+        ref={ref}
+        className={cnPresetList(null, [className])}
+      >
+        <div className={cnPresetList('Wrapper')}>
+          {items.map((item) => (
+            <button
+              className={cnPresetList('Item', { checked: getChecked(item) })}
+              key={getLabel(item)}
+              onClick={getOnChange(item)}
+              style={{ ['--brandColor' as any]: getBrandColor(item) }}
+              type="button"
+            >
+              {getLabel(item)}
+            </button>
+          ))}
+        </div>
       </div>
-    </div>
-  );
-});
+    );
+  },
+);

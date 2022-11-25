@@ -1,7 +1,4 @@
 .portal--PresetList {
-  margin-right: -5vw;
-  margin-left: -5vw;
-
   *::-webkit-scrollbar {
     width: initial;
     height: initial;
@@ -21,7 +18,7 @@
     overflow-x: scroll;
     justify-content: flex-start;
     align-items: stretch;
-    padding: 0 5vw 30px;
+    padding: 0 0 30px;
   }
 
   &-LastItem {
@@ -40,10 +37,10 @@
     z-index: 1;
     display: block;
     overflow: hidden;
-    flex-shrink: 0;
+    flex: auto;
     width: auto;
     min-height: var(--control-height-m);
-    padding: var(--space-xs) var(--space-s);
+    padding: var(--space-2xs) var(--space-xs);
     color: var(--color-typo-primary);
     background: var(--color-control-bg-default);
     border: none;
@@ -53,13 +50,17 @@
     text-align: center;
     cursor: pointer;
     transition: color 0.2s, box-shadow 0.2s;
+    flex-shrink: 0;
 
     &:not(:first-child) {
       margin-left: var(--space-xs);
     }
 
+    @media (min-width: 380px) {
+      padding: var(--space-xs) var(--space-s);
+    }
+
     @media (min-width: 720px) {
-      flex-grow: 2;
       font-size: var(--size-text-l);
     }
 

@@ -5,6 +5,7 @@ import { useLink } from '@consta/stand/src/hooks/useLink';
 import { routesNames } from '@consta/stand/src/modules/router';
 import { Button } from '@consta/uikit/Button';
 import { Text } from '@consta/uikit/Text';
+import { useBreakpoints } from '@consta/uikit/useBreakpoints';
 import { useAction } from '@reatom/npm-react';
 import React, { useEffect, useRef } from 'react';
 
@@ -75,16 +76,16 @@ const cnHeroScreen = cn('HeroScreen');
 export const HeroScreen: React.FC = () => {
   const setFixedHeader = useAction(fixedAtom);
   const ref = useRef<HTMLDivElement>(null);
-
   const [componentsLink, componentsOnClick] = useLink({
     to: routesNames.LIBS,
   });
-
-  const listner = () => {
-    setFixedHeader(window.pageYOffset >= (ref.current?.offsetHeight || 0));
-  };
+  const breakpoints = useBreakpoints({ bigPhone: 400 });
+  const buttonSize = breakpoints.bigPhone ? 'l' : 'm';
 
   useEffect(() => {
+    const listner = () => {
+      setFixedHeader(window.pageYOffset >= (ref.current?.offsetHeight || 0));
+    };
     window.addEventListener('scroll', listner);
     return () => {
       window.removeEventListener('scroll', listner);
@@ -126,7 +127,7 @@ export const HeroScreen: React.FC = () => {
                 onClick={componentsOnClick}
                 target="_blank"
                 label="Компоненты"
-                size="l"
+                size={buttonSize}
                 className="decorator decorator_indent-r_xs"
               />
               <Button
@@ -134,7 +135,7 @@ export const HeroScreen: React.FC = () => {
                 href={contsaCommunityFigma}
                 target="_blank"
                 label="Figma"
-                size="l"
+                size={buttonSize}
                 view="secondary"
                 iconLeft={IconFigma}
                 onlyIcon
@@ -145,7 +146,7 @@ export const HeroScreen: React.FC = () => {
                 href={constaGitHub}
                 target="_blank"
                 label="GitHub"
-                size="l"
+                size={buttonSize}
                 view="secondary"
                 iconLeft={IconGithub}
                 onlyIcon
