@@ -1739,15 +1739,15 @@
   resolved "https://registry.yarnpkg.com/@consta/header/-/header-1.0.0.tgz#95e3db57857a10aad4c5214c39884630495fc970"
   integrity sha512-JM/JWRxsbBnh2a8Wn99ly8ub0Rrwf17IolU3TFTJd8uj1230n3P5kbdfPXdVMnq38i16k1fD6ubxenLN0612YQ==
 
-"@consta/stand@^0.0.76":
-  version "0.0.76"
-  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.76.tgz#cda60ea4a693e2a7f45839f132b8426a7bd18f77"
-  integrity sha512-r4yx11lO/cQZUB9bErP0KfgX/eLQS3OxD7foh8ZuqNMxZTOlnzIJ2Zf+TTh2/oLkuL1FhQggoAP/tRo+1Xpqlw==
+"@consta/stand@^0.0.77":
+  version "0.0.77"
+  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.77.tgz#776ff944062dd95849995ef2e6e78c6cc3830723"
+  integrity sha512-VOah/qZn5uPx6L+oy0BgkT55WtuqVRSh7ZonOYHtrWW+YlO25DPfKBfPxy46xAENLPbwcDwy+2QTbewN9Cj//A==
   dependencies:
     "@bem-react/classname" "^1.5.12"
     "@bem-react/classnames" "^1.3.10"
     "@consta/header" "^1.0.0"
-    "@consta/uikit" "^4.2.2"
+    "@consta/uikit" "^4.4.1"
     "@mdx-js/loader" "^2.1.5"
     "@mdx-js/react" "^2.1.5"
     "@oclif/command" "^1.8.16"
@@ -1794,7 +1794,7 @@
     react-router5 "^8.0.1"
     react-syntax-highlighter "^15.5.0"
     react-transition-group "^4.4.5"
-    reatom-router5 "^3.0.0"
+    reatom-router5 "^3.0.2"
     remark-gfm "^1.0.0"
     resolve "^1.20.0"
     resolve-url-loader "^4.0.0"
@@ -1819,6 +1819,21 @@
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-4.2.2.tgz#a281886aebac0d04890b9604b4c5cae9d9b5bf57"
   integrity sha512-5aDTDf0xlIx0VzB8kc42+9SGHUwS2lTIUj8BStFhlurT94dogv1BGEqa0CRJlzVix3pq1z/RFthUrGy1b+ZA9w==
+  dependencies:
+    "@bem-react/classname" "^1.5.12"
+    "@bem-react/classnames" "^1.3.10"
+    compute-scroll-into-view "^1.0.17"
+    date-fns "^2.29.1"
+    focus-trap-react "8.7.0"
+    imask "^6.4.2"
+    react-dropzone "11.3.4"
+    react-textarea-autosize "^8.3.4"
+    react-transition-group "^4.4.5"
+
+"@consta/uikit@^4.4.1":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-4.5.0.tgz#a77d642300c69a2095df837ae86744ec1be9c93a"
+  integrity sha512-BX86EJStTUGQ8j8id8TTOCgxL2KaHjr60zBpL4IGAw6qM/3MyE4koKeIcEVNiHTWhxmv4VxZ/4enxJiVoO89cw==
   dependencies:
     "@bem-react/classname" "^1.5.12"
     "@bem-react/classnames" "^1.3.10"
@@ -15327,10 +15342,10 @@ readdirp@~3.6.0:
   dependencies:
     picomatch "^2.2.1"
 
-reatom-router5@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/reatom-router5/-/reatom-router5-3.0.1.tgz#f1c70f18cb61d6e2f924f7cf82575334f5dfdc6b"
-  integrity sha512-CMgaeULc0DEXeV9NFslNjuUbm/9tT6iS5Fn+1yVgxQfm1HCmbJ2UA8Vm3DUqjGguXQXSK+R7mKCjmNPAnfTYpQ==
+reatom-router5@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/reatom-router5/-/reatom-router5-3.0.2.tgz#baf55cda3ec187a97b3b952ec9f0f4fe681cb7b8"
+  integrity sha512-zS3BROB4MfSDKNSylrRC3U00RPkQVZgzIm4QTFYAKVZWttYCIwlLNkuiTuKvHJcCcSOytUArirVp7j212lBt+w==
 
 rechoir@^0.7.0:
   version "0.7.1"
