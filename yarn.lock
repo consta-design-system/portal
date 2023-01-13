@@ -1744,10 +1744,10 @@
   resolved "https://registry.yarnpkg.com/@consta/icons/-/icons-0.0.2.tgz#96269b3538bc63d1fbc92d6b803e497b572f1689"
   integrity sha512-ZEJlBP0/eQYkO9k71+nv2NsL21w+ftsxwxIh9xuqAOHeLYc5yI2ZxZaqaawgGMK/m5QG4UiX3qMqXYzolRpaXg==
 
-"@consta/stand@^0.0.95":
-  version "0.0.95"
-  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.95.tgz#831a04d13da0d34df0b5ab145039a35c978bcf4b"
-  integrity sha512-mQBzUmojTaS91/fIa1n707I7fOKISwbfTCMbiT4Pq0ynn6Ev2/EqEcDttwD9RyAE7CiG6Tqmyt1smVDTIchHDw==
+"@consta/stand@^0.0.96":
+  version "0.0.96"
+  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.96.tgz#4d2e7ff21e51c31728c225ceb9a50d5d903d4fa4"
+  integrity sha512-SQr1I7exA8mVwLj328EFAHRmPctywqZzQHZXimPvSLXL/153Auqyg1uJu5EkWWAqSb7Bexipnb3fKiC6jykJBA==
   dependencies:
     "@bem-react/classname" "^1.5.12"
     "@bem-react/classnames" "^1.3.10"
