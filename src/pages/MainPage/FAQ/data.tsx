@@ -121,7 +121,7 @@ export const questions = [
     title: 'Как использовать дизайн-систему?',
     answer: () => {
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      const [libLink, libOnClick] = useLink({
+      const [libLink] = useLink({
         to: routesNames.LIBS_LIB,
         params: { lib: 'uikit' },
       });
@@ -145,14 +145,7 @@ export const questions = [
           <Text as="p" size="xl" className="decorator decorator_indent-b_m">
             Если вы запускаете веб-проект и готовы вести разработку на React,
             разработчики могут{' '}
-            <Text
-              as="a"
-              view="link"
-              href={libLink}
-              onClick={libOnClick}
-              target="_blank"
-              size="xl"
-            >
+            <Text as="a" view="link" href={libLink} target="_blank" size="xl">
               подключить нашу библиотеку
             </Text>{' '}
             с элементами интерфейса. Если нет, дизайнеры могут собрать макет
@@ -192,22 +185,14 @@ export const questions = [
     title: 'А если мы работаем с подрядчиками?',
     answer: () => {
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      const [libLink, libOnClick] = useLink({
-        to: routesNames.LIBS_LIB,
-        params: { lib: 'uikit' },
+      const [libLink] = useLink({
+        to: routesNames.LIBS,
       });
 
       return (
         <Text as="p" size="xl">
           Отлично, отправьте им ссылку на{' '}
-          <Text
-            as="a"
-            view="link"
-            href={libLink}
-            onClick={libOnClick}
-            target="_blank"
-            size="xl"
-          >
+          <Text as="a" view="link" href={libLink} target="_blank" size="xl">
             описание дизайн-системы
           </Text>
           . Все ресурсы публичные, можно использовать и «внутри» компании, и
@@ -241,7 +226,7 @@ export const questions = [
     title: 'Как принять участие в разработке?',
     answer: () => {
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      const [link, onClick] = useLink({
+      const [link] = useLink({
         to: routesNames.LIBS_LIB_STAND,
         params: { lib: 'portal', stand: 'custom-contribute' },
       });
@@ -259,7 +244,6 @@ export const questions = [
             target="_blank"
             size="xl"
             display="block"
-            onClick={onClick}
           >
             Как это сделать
           </Text>
@@ -319,7 +303,13 @@ export const questions = [
     answer: () => (
       <Text as="p" size="xl" className="decorator decorator_indent-b_m">
         Вы можете найти любых специалистов и даже всю команду на{' '}
-        <Text as="a" view="link" href={platfortmProfessionals} size="xl">
+        <Text
+          as="a"
+          view="link"
+          href={platfortmProfessionals}
+          target="_blank"
+          size="xl"
+        >
           платформе Профессионалы 4.0
         </Text>
         . Разместите описание вашего проекта или задачи и ждите откликов. После

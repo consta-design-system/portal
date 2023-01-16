@@ -1,7 +1,7 @@
 export const licenceMit =
   'https://github.com/consta-design-system/uikit/blob/master/LICENSE';
-export const constaUikit = 'http://portal.consta.design';
-export const constaUikitDevelopContributors = `${constaUikit}/libs/portal/custom-contribute`;
+export const constaLibs = 'http://consta.design/libs';
+export const constaUikitDevelopContributors = `http://consta.design/libs/portal/custom-contribute`;
 export const contsaCommunityFigma = 'https://www.figma.com/@consta';
 export const constaFigma = 'https://www.figma.com/@consta';
 export const constaGitHub = 'https://github.com/consta-design-system';

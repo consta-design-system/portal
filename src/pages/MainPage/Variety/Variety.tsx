@@ -1,14 +1,19 @@
 import './Variety.css';
 
+import { useLink } from '@consta/stand/src/hooks/useLink';
+import { routesNames } from '@consta/stand/src/modules/router';
 import { Text } from '@consta/uikit/Text';
 import React from 'react';
 
-import { constaUikit } from '##/modules/api/links';
 import { cn } from '##/utils/bem';
 
 const cnVariety = cn('Variety');
 
 export const Variety: React.FC = () => {
+  const [libLink] = useLink({
+    to: routesNames.LIBS,
+  });
+
   return (
     <section className={cnVariety(null, ['Container Section'])}>
       <Text
@@ -26,7 +31,7 @@ export const Variety: React.FC = () => {
         Основа, из которой легко построить интерфейс — для любых задач. Большой
         выбор, много вариантов, можно менять и дорабатывать. Посмотреть, как
         выглядят и работают компоненты дизайн-системы, можно в нашей{' '}
-        <Text size="2xl" view="link" as="a" href={constaUikit} target="_blank">
+        <Text size="2xl" view="link" as="a" href={libLink} target="_blank">
           библиотеке
         </Text>
         .

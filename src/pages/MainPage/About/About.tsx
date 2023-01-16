@@ -108,7 +108,7 @@ export const About: React.FC = () => {
             },
             {
               title: 'Разработчикам',
-              subTitle: 'Репозитории библиоткек на gitHub',
+              subTitle: 'Репозитории библиотек на GitHub.',
               hasVersion: true,
               icon: 'github',
               href: constaGitHub,

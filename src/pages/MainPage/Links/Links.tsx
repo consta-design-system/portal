@@ -23,9 +23,8 @@ export const cnLinks = cn('Links');
 export const Links: React.FC = () => {
   const { themeClassNames } = useTheme();
 
-  const [libLink, libOnClick] = useLink({
-    to: routesNames.LIBS_LIB,
-    params: { lib: 'uikit' },
+  const [libsLink, libsOnClick] = useLink({
+    to: routesNames.LIBS,
   });
 
   return (
@@ -49,8 +48,8 @@ export const Links: React.FC = () => {
             view="storybook"
             icon={IconStorybook}
             title="Витрина компонентов и документация"
-            hrefKit={libLink}
-            buttonClick={libOnClick}
+            hrefKit={libsLink}
+            buttonClick={libsOnClick}
             description="Посмотрите, как выглядят компоненты, как они меняются и прочитайте, где и когда их лучше использовать."
           />
           <LinksCard
@@ -67,7 +66,7 @@ export const Links: React.FC = () => {
             icon={IconGithub}
             title="React-библиотека"
             hrefKit={constaGitHub}
-            description="Репозитории библиоткек на React, TypeScript и PostCSS. Отправьте эту ссылку фронтенд разработчику — он знает, что с ней делать."
+            description="Репозитории библиотек на React, TypeScript и PostCSS. Отправьте эту ссылку фронтенд разработчику — он знает, что с ней делать."
           />
         </div>
       </div>
