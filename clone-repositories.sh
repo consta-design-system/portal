@@ -15,3 +15,4 @@ git clone -b master https://github.com/consta-design-system/widgets.git ./reposi
 git clone -b master https://github.com/consta-design-system/amcharts-map-examples.git ./repositories/amcharts-map-examples
 git clone -b master https://github.com/consta-design-system/gpn-responses.git ./repositories/gpn-responses
 git clone -b master https://github.com/consta-design-system/icons.git ./repositories/icons
+git clone -b master https://github.com/consta-design-system/react-slick-adapter.git ./repositories/react-slick-adapter

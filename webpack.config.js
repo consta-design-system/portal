@@ -28,6 +28,7 @@ const repos = [
   'amcharts-map-examples',
   'gpn-responses',
   'icons',
+  'react-slick-adapter',
 ];
 
 const repositoriesTsRules = (repos) => {

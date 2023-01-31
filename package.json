@@ -217,6 +217,9 @@
     "react-uid": "2.2.0",
     "url-loader": "^4.1.1",
     "uuid": "^9.0.0",
-    "@consta/icons": "^0.1.1"
+    "@consta/icons": "^0.1.1",
+    "@types/react-slick": "^0.23.10",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   }
 }
