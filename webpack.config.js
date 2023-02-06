@@ -64,6 +64,46 @@ const repositoriesMdRules = (repos) => {
   }));
 };
 
+const repositoriesCacheGroups = (repos) => {
+  const cacheGroups = {};
+  for (let index = 0; index < repos.length; index++) {
+    const repoName = repos[index];
+    const groupName = `css-async-repo-${repoName}`;
+
+    cacheGroups[groupName] = {
+      name: groupName,
+      test: new RegExp(`/repositories/${repoName}/`),
+      type: 'css/mini-extract',
+      chunks: 'async',
+      minChunks: 1,
+      minSize: 1,
+      maxSize: 500000,
+      reuseExistingChunk: true,
+    };
+  }
+  return cacheGroups;
+};
+
+const modulesCacheGroups = (repos) => {
+  const cacheGroups = {};
+  for (let index = 0; index < repos.length; index++) {
+    const repoName = repos[index];
+    const groupName = `css-async-module-${repoName}`;
+
+    cacheGroups[groupName] = {
+      name: groupName,
+      test: new RegExp(`/node_modules/@consta/${repoName}/`),
+      type: 'css/mini-extract',
+      chunks: 'async',
+      minChunks: 1,
+      minSize: 1,
+      maxSize: 500000,
+      reuseExistingChunk: true,
+    };
+  }
+  return cacheGroups;
+};
+
 module.exports = function () {
   return {
     target: 'web',
@@ -239,8 +279,9 @@ module.exports = function () {
       new webpack.ProgressPlugin(),
 
       new MiniCssExtractPlugin({
-        filename: 'static/[contenthash].main.css',
+        filename: 'static/[contenthash].css',
         chunkFilename: 'static/[contenthash].css',
+        ignoreOrder: true,
       }),
 
       new CssMinimizerPlugin(),
@@ -255,11 +296,37 @@ module.exports = function () {
       path: path.resolve(__dirname, 'build'),
       ...(isEnvProduction && {
         asyncChunks: true,
-        filename: 'static/[contenthash].main.js',
+        filename: 'static/[contenthash].js',
         chunkFilename: 'static/[contenthash].js',
         assetModuleFilename: 'static/media/[contenthash][ext]',
       }),
       publicPath: '/',
+    },
+
+    optimization: {
+      ...(isEnvProduction && {
+        splitChunks: {
+          cacheGroups: {
+            initial_consta_stands: {
+              name: `initial_consta_stands`,
+              test: /\/node_modules\/@consta\/stand\/src\/stands\//,
+              chunks: 'initial',
+            },
+            initial_node_modules_consta_stand: {
+              name: `initial_node_modules_consta_stand`,
+              test: /\/node_modules\/@consta\/stand\/(?!src\/stands)/,
+              chunks: 'initial',
+            },
+            initial_node_modules: {
+              name: `initial_node_modules`,
+              test: /\/node_modules\/(?!@consta\/stand)/,
+              chunks: 'initial',
+            },
+            ...repositoriesCacheGroups(repos),
+            ...modulesCacheGroups(repos),
+          },
+        },
+      }),
     },
 
     devServer: {
