@@ -18,7 +18,7 @@ import {
 } from '##/modules/api/links';
 import { cn } from '##/utils/bem';
 
-import { AboutVideo } from './AboutVideo/AboutVideo';
+// import { AboutVideo } from './AboutVideo/AboutVideo';
 
 const cnAbout = cn('About');
 
@@ -74,9 +74,9 @@ export const About: React.FC = () => {
             всё, что нужно дизайнерам и разработчикам для создания интерфейсов.
           </Text>
         </div>
-        <div className="tpl-grid__fraction tpl-grid__fraction_m-col_4 ">
+        {/* <div className="tpl-grid__fraction tpl-grid__fraction_m-col_4 ">
           <AboutVideo />
-        </div>
+        </div> */}
       </div>
 
       <div
