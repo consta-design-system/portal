@@ -59,7 +59,8 @@ export const Header: HeaderComponent = React.forwardRef((props, ref) => {
               <li key={index} className={cnHeader('Item')}>
                 <Text
                   as="a"
-                  size="m"
+                  size="s"
+                  lineHeight="m"
                   view="primary"
                   href={link}
                   target="_blank"

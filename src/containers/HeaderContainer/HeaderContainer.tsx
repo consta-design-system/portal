@@ -7,10 +7,10 @@ import { useAtom } from '@reatom/npm-react';
 import React, { useEffect, useRef } from 'react';
 
 import { HeaderFlexible } from '##/components/HeaderFlexible/HeaderFlexible';
-import IconFigma from '##/icons/Figma.icon.svg';
-import IconGithub from '##/icons/Github.icon.svg';
-import IconStorybook from '##/icons/Storybook.icon.svg';
-import IconTelegram from '##/icons/Telegram.icon.svg';
+import IconComponent from '##/icons/Component.icon.svg';
+import IconFigma from '##/icons/FigmaSmall.icon.svg';
+import IconGithub from '##/icons/GithubSmall.icon.svg';
+import IconTelegram from '##/icons/TelegramSmall.icon.svg';
 import ConstaLogo from '##/images/ConstaLogo2.image.svg';
 import {
   constaGitHub,
@@ -61,7 +61,7 @@ export const HeaderContainer: React.FC = () => {
           label: 'Компоненты',
           link: componentsLink,
           onClick: componentsOnClick,
-          icon: IconStorybook,
+          icon: IconComponent,
           onlyIcon: false,
         },
         {
