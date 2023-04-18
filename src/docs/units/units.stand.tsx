@@ -1,8 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Единицы и сокращения',
+  title: 'Единицы измерения',
   id: 'units',
-  group: 'reference',
-  order: 11,
+  group: 'guidelines',
+  order: 260,
 });

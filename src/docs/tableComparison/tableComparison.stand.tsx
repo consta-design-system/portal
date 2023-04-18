@@ -1,8 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Какую таблицу выбрать',
+  title: 'Работа с таблицами',
   id: 'tableComparison',
-  group: 'workflow',
-  order: 70,
+  group: 'guidelines',
+  order: 240,
 });

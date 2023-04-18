@@ -4,5 +4,5 @@ export default createStand({
   title: 'Документация для компонента',
   id: 'docs',
   group: 'portal',
-  order: 20,
+  order: 820,
 });

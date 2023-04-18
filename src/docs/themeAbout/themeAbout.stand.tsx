@@ -1,9 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Тематизация',
+  title: 'Что такое тематизация',
   id: 'themeAbout',
   group: 'theme',
-  order: 210,
-  visibleOnHeader: true,
+  order: 310,
 });

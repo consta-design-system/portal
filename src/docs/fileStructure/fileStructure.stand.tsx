@@ -4,5 +4,5 @@ export default createStand({
   title: 'Файловая структура',
   id: 'fileStructure',
   group: 'portal',
-  order: 30,
+  order: 830,
 });

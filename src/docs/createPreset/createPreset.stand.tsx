@@ -4,5 +4,5 @@ export default createStand({
   title: 'Как создать пресет',
   id: 'createPreset',
   group: 'theme',
-  order: 212,
+  order: 330,
 });

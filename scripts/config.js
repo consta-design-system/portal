@@ -10,4 +10,5 @@ module.exports = {
   standsPath: 'node_modules/@consta/stand/src/stands',
   standTabs: ['dev', 'design', 'use'],
   routesPath: '/src/modules/router',
+  standsConfig: '/src/stand/standsConfig.ts',
 };

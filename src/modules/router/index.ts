@@ -13,3 +13,5 @@ export const routes: RouterItem[] = [
     path: '/',
   },
 ];
+
+export const defaultRoute = '';
