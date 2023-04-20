@@ -4,5 +4,5 @@ export default createStand({
   title: 'Как подключить тему',
   id: 'connectTheme',
   group: 'theme',
-  order: 211,
+  order: 320,
 });

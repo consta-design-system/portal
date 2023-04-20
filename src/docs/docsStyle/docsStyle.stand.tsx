@@ -1,8 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Текст, стиль, формат',
-  id: 'docsStyle',
-  group: 'portal',
-  order: 40,
+  title: 'Редполитика',
+  id: 'editorialpolicy',
+  group: 'guidelines',
+  order: 250,
 });

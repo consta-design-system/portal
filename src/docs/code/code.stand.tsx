@@ -1,8 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Договоренности по оформлению кода',
+  title: 'Соглашение по оформлению кода',
   id: 'code',
-  group: 'workflow',
-  order: 50,
+  group: 'contributers',
+  order: 450,
 });

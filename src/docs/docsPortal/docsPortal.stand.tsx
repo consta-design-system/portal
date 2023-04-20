@@ -4,5 +4,5 @@ export default createStand({
   title: 'Портал',
   id: 'docsPortal',
   group: 'portal',
-  order: 10,
+  order: 810,
 });

@@ -1,8 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Как работать с макетами',
-  id: 'protptype',
-  group: 'workflow',
-  order: 60,
+  title: 'Figma для разработчиков',
+  id: 'figmadev',
+  group: 'guidelines',
+  order: 220,
 });
