@@ -38,14 +38,14 @@ libsPageConfig({
       sortOrder: 4,
     },
     {
-      label: 'Основные библиотеки',
+      label: 'Библиотеки',
       description:
         'Готовые блоки, большой набор адаптивных компонентов, графиков и мобильные UI-киты.',
       renderList: ListCardBig,
       sortOrder: 5,
     },
     {
-      label: 'Отдельные компоненты',
+      label: 'Специальные компоненты',
       description:
         'Компоненты для аналитики, примеры использования карт, а также инфографика.',
       renderList: ListCardBig,
