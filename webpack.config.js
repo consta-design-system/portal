@@ -29,6 +29,7 @@ const repos = [
   'gpn-responses',
   'icons',
   'react-slick-adapter',
+  'theme-constructor',
 ];
 
 const repositoriesTsRules = (repos) => {
@@ -192,7 +193,15 @@ module.exports = function () {
           include: [path.resolve(__dirname, 'node_modules')],
         },
         {
-          test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.pdf$/],
+          test: [
+            /\.bmp$/,
+            /\.gif$/,
+            /\.jpe?g$/,
+            /\.png$/,
+            /\.pdf$/,
+            /\.woff$/,
+            /\.woff2$/,
+          ],
           loader: require.resolve('url-loader'),
           options: {
             limit: false,
