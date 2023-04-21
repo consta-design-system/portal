@@ -220,6 +220,12 @@
     "@consta/icons": "^0.1.1",
     "@types/react-slick": "^0.23.10",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "jszip": "^3.10.1",
+    "file-saver": "^2.0.5",
+    "@types/file-saver": "^2.0.5",
+    "@consta/charts": "^0.7.1",
+    "color": "^4.2.3",
+    "@types/color": "^3.0.3"
   }
 }
