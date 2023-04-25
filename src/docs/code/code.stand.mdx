@@ -2,8 +2,8 @@
 
 Если вы собираетесь разбить компонент на более мелкие сущности, нужно придерживаться следующих правил:
 
-1. компонент должен [лежать в папке с дочерними компонентами](##LIBS.LIB.STAND/lib:portal/stand:workflow-filestructure) (не быть в том же файле),
-2. компонент должен быть оформлен как отдельный БЭМ-блок.
+1. Компонент должен [лежать в папке с дочерними компонентами](##LIBS.LIB.STAND/lib:portal/stand:workflow-filestructure) (не быть в том же файле),
+2. Компонент должен быть оформлен как отдельный БЭМ-блок.
 
 ## Type vs Interface
 
@@ -62,8 +62,8 @@ export const Component: React.FC<Props> = ({ data }) => {
 
 Требования к иконками в UI-ките:
 
-- для каждого размера иконки нужно использовать отдельное изображение,
-- все иконки в библиотеке должны соответствовать типу `IconComponent` ([посмотреть тип `IconComponent`](https://github.com/consta-design-system/uikit/blob/master/src/icons/Icon/Icon.tsx#L36)).
+- Для каждого размера иконки нужно использовать отдельное изображение.
+- Все иконки в библиотеке должны соответствовать типу `IconComponent` ([посмотреть тип `IconComponent`](https://github.com/consta-design-system/uikit/blob/master/src/icons/Icon/Icon.tsx#L36)).
 
 Если в API компонента используются иконки, стоит указывать тип `IconComponent`.
 
