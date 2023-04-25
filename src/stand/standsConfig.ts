@@ -1,3 +1,5 @@
+import '##/modules/spa';
+
 import {
   libsPageConfig,
   ListCardBanner,
