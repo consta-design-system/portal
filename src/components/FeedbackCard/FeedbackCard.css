@@ -1,0 +1,23 @@
+.portal--FeedbackCard {
+  &-Image {
+    overflow: hidden;
+    min-width: var(--space-4xl);
+    max-width: var(--space-4xl);
+    min-height: var(--space-4xl);
+    max-height: var(--space-4xl);
+    border-radius: 50%;
+  }
+
+  &-Button {
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &-Title {
+    max-width: 273px;
+  }
+}

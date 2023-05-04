@@ -1,0 +1,16 @@
+.portal--StandFeedback {
+  padding-right: var(--doc-layout-content-padding-right);
+  padding-left: var(--doc-layout-content-padding-left);
+
+  &-Wrapper {
+    display: grid;
+    max-width: 800px;
+    margin: auto;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+
+    &_breakpointS {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

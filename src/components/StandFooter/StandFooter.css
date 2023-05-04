@@ -1,0 +1,40 @@
+.portal--StandFooter {
+  position: absolute;
+  bottom: calc((var(--footer-height) + var(--space-3xl)) * -1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: var(--color-bg-secondary);
+  gap: var(--space-xs);
+
+  &_breakpointS {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_breakpointM {
+    width:
+      calc(
+        100% - var(--doc-layout-center-padding-left) -
+        var(--doc-layout-center-padding-right)
+      );
+  }
+
+  & a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &-Label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+}

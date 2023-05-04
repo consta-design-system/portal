@@ -1,11 +1,14 @@
 import '##/modules/spa';
 
 import {
+  footerConfig,
   libsPageConfig,
   ListCardBanner,
   ListCardBig,
   ListCardList,
 } from '@consta/stand';
+
+import { StandFooter } from '##/components/StandFooter';
 
 import description from './standsDescription.mdx';
 
@@ -72,3 +75,5 @@ libsPageConfig({
     },
   ],
 });
+
+footerConfig({ copmonent: StandFooter });
