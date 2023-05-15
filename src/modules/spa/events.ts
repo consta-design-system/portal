@@ -3,20 +3,16 @@ import { routerAtom, transitionSuccessAction } from 'reatom-router5';
 
 import { routeToCustomParam } from '##/modules/spa/routeToCustomParam';
 import { spaAtom } from '##/modules/spa/spaAtom';
-import { spaOnload } from '##/modules/spa/spaOnload';
-import { spaSendEvent } from '##/modules/spa/spaSendEvent';
 import { subscribeToExternalTransitions } from '##/modules/spa/subscribeToExternalTransitions';
 
 // Прокидываем счетчик в атом, для того чтобы точно понимать когда прошла иницилизация счетчика
-spaOnload((data) => {
-  spaAtom(ctx, data);
-});
 
 // Подписка на любой переход по страницам
 export const routeEvent = () => {
+  const spa = ctx.get(spaAtom);
   ctx.subscribe(transitionSuccessAction, ([data]) => {
-    if (spaSendEvent && data?.params[0].toState) {
-      spaSendEvent(1, {
+    if (spa && data?.params[0].toState) {
+      spa.sendEvent(1, {
         customparams: routeToCustomParam(data.params[0].toState),
       });
     }

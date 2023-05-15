@@ -9,7 +9,6 @@ export const spaOnload = (
     clearTimeout(timeoutIndex);
     if (window.gpnAnalytics?.sendEvent) {
       fn?.(window.gpnAnalytics);
-      console.log(window.gpnAnalytics?.sendEvent);
     } else {
       timeoutIndex = setTimeout(timeout, 100);
     }
