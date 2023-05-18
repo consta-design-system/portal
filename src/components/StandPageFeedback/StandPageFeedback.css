@@ -1,9 +1,0 @@
-.stand--StandPageFeedback {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-2xl);
-
-  @media screen and (min-width: 860px) {
-    grid-template-columns: 1fr 1fr;
-  }
-}
