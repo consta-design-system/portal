@@ -22,6 +22,7 @@ const repos = [
   'amcharts-map-examples',
   'gpn-responses',
   'icons',
+  'theme-constructor',
 ];
 
 const clone = async (repoName) => {
