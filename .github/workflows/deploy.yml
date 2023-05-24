@@ -42,6 +42,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
+      - name: Сlone repositories
+        run: yarn clone-repos
+
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
