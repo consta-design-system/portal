@@ -23,6 +23,7 @@ const repos = [
   'gpn-responses',
   'icons',
   'theme-constructor',
+  'react-slick-adapter',
 ];
 
 const clone = async (repoName) => {
