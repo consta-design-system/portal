@@ -25,7 +25,6 @@ libsPageConfig({
     {
       label: 'Гайдлайны',
       maxCount: 4,
-
       renderList: ListCardList,
       buttonMore: true,
       sortOrder: 1,
@@ -48,6 +47,7 @@ libsPageConfig({
         'Готовые блоки, большой набор адаптивных компонентов, графиков и мобильные UI-киты.',
       renderList: ListCardBig,
       sortOrder: 5,
+      initialOpen: true,
     },
     {
       label: 'Специальные компоненты',
@@ -57,6 +57,7 @@ libsPageConfig({
       sortOrder: 6,
       maxCount: 2,
       buttonMore: true,
+      initialOpen: true,
     },
     {
       label: 'Адаптеры',
@@ -66,6 +67,7 @@ libsPageConfig({
       sortOrder: 7,
       maxCount: 2,
       buttonMore: true,
+      initialOpen: true,
     },
     {
       label: 'Портал',
