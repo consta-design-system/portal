@@ -53,13 +53,13 @@ import Icon6 from './components/InstructionPictures/images/Icon6.image.svg';
 
 > [Подробнее про автоматическую сборку иконок из SVG в компоненты](##LIBS.LIB.STAND.TAB/lib:portal/stand:custom-addicons/tab:dev)
 
-#### 1. Подготовьте иконки в SVG
+**1. Подготовьте иконки в SVG**
 
-1. Экспортируйте иконки из Figma в формате SVG.
+- Экспортируйте иконки из Figma в формате SVG.
 
 <InstructionPictures name="9-figma" />
 
-2. Откройте файл SVG в редакторе кода или простом текстовом редакторе (подойдет Блокнот или TextEdit) и удалите атрибуты `fill`, `fillOpacity`, `width`, `height`.
+- Откройте файл SVG в редакторе кода или простом текстовом редакторе (подойдет Блокнот или TextEdit) и удалите атрибуты `fill`, `fillOpacity`, `width`, `height`.
 
 > Если эти атрибуты останутся, иконки не будут меняться, когда поменяется размер компонента или тема
 
@@ -71,7 +71,7 @@ import Icon6 from './components/InstructionPictures/images/Icon6.image.svg';
 </svg>
 ```
 
-#### 2. Склонируйте [репозиторий @consta/uikit](https://github.com/consta-design-system/uikit) на GitHub
+**2. Склонируйте [репозиторий @consta/uikit](https://github.com/consta-design-system/uikit) на GitHub**
 
 Например, выполните в консоли команду:
 
@@ -81,13 +81,13 @@ import Icon6 from './components/InstructionPictures/images/Icon6.image.svg';
 
 <InstructionPictures name="8-github" />
 
-#### 3. Сделайте новую ветку
+**3. Сделайте новую ветку**
 
 Например, выполните в консоли команду:
 
 `git checkout -b feat/new_icons`
 
-#### 4. Скопируйте иконки
+**4. Скопируйте иконки**
 
 Перейдите в папку со склонированным репозиторием, создайте папку с названием новой иконки в папке `/uikit/src/icons/` и положите в неё полученные SVG.
 
@@ -95,25 +95,25 @@ import Icon6 from './components/InstructionPictures/images/Icon6.image.svg';
 
 <InstructionPictures name="10-finder" />
 
-#### 5. Сгенерируйте файлы иконок
+**5. Сгенерируйте файлы иконок**
 
 В консоли в корне проекта выполните команду:
 
 `yarn pre-build`
 
-#### 6. Сделайте коммит
+**6. Сделайте коммит**
 
 В консоли в корне проекта выполните команду:
 
 `git commit`
 
-#### 7. Отправьте изменения в репозиторий @consta/uikit
+**7. Отправьте изменения в репозиторий @consta/uikit**
 
 В консоли выполните команду:
 
 `git push`
 
-#### 8. Создайте пулреквест
+**8. Создайте пулреквест**
 
 Перейдите на [GitHub](https://github.com/consta-design-system/uikit), найдите свою ветку и нажмите **New pull request**.
 
@@ -121,6 +121,6 @@ import Icon6 from './components/InstructionPictures/images/Icon6.image.svg';
 
 Выберите в первом селекте ветку **dev**, во втором свою. И заполните всё, что сможете.
 
-#### Готово
+**Готово!**
 
 Когда мы примем ваш пулреквест, иконки добавятся в библиотеку.
