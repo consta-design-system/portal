@@ -1734,10 +1734,10 @@
   dependencies:
     chalk "^4.1.0"
 
-"@consta/charts@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@consta/charts/-/charts-0.7.1.tgz#f8d2a3ab15e8b8074e14a712d79c6f5ab453958e"
-  integrity sha512-1PZDc9hA9HEb3JD8uPa98URUF0nPMCTo9Beh5aDY59iLlNymoWyjowZovDndVRwGJOW7s3ddPwgPjaSGNanwSw==
+"@consta/charts@^0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@consta/charts/-/charts-0.7.2.tgz#1576dc8f745d5263ebc830bef79132940202d4a7"
+  integrity sha512-lC3+GKOO6QCB3etmqebgapGJ8F9gg21NqqLD8pttIf9n1en3aASSXhrZTyGf84NzRJk3NRc5XK/+URU28NLOpw==
   dependencies:
     "@antv/g2plot" "2.4.7"
 
@@ -1755,6 +1755,11 @@
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/@consta/icons/-/icons-0.4.2.tgz#a1dc89ffd62643bd798ebf6db6af52ae154e376b"
   integrity sha512-lXZhWRTkjlubVLUDCSGnVyW1ikTTFkhvqM6HEcI+dGwtcrxvB2QwcMxlBG0eQARFWdX4rSmHXp0ebbYxfnTa0Q==
+
+"@consta/icons@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@consta/icons/-/icons-0.5.2.tgz#eaa529818adf2fe5dd167f3749b87fdf31c6da5f"
+  integrity sha512-Q5j+aCs/uzR8JbiN/UYpQ8FbxC22rUVAvEIzfAum4B8rl7FkiIguYvHjfFesuQCocj1OR0HJHIGkfKycR9e9LQ==
 
 "@consta/stand@^0.0.112":
   version "0.0.112"
@@ -1831,22 +1836,6 @@
     webpack-dev-server "^4.13.1"
     webpack-manifest-plugin "^5.0.0"
     workbox-webpack-plugin "^6.4.1"
-
-"@consta/uikit@^4.17.0":
-  version "4.17.0"
-  resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-4.17.0.tgz#d0d3ab663e00524dddd335bfbb1ba7df4cb6ef81"
-  integrity sha512-qjhlh9Iq8Hc6Srd0NwxwoXm+IKwUBHdlc/VRyDHJN8NMNm/1H8BDM2FwLDyjzhe3RoVOhX8hGmnK36XJtnabhQ==
-  dependencies:
-    "@bem-react/classname" "^1.5.12"
-    "@bem-react/classnames" "^1.3.10"
-    "@consta/icons" "^0.1.1"
-    compute-scroll-into-view "^1.0.17"
-    date-fns "^2.29.1"
-    focus-trap-react "8.7.0"
-    imask "^6.4.3"
-    react-dropzone "11.3.4"
-    react-textarea-autosize "^8.3.4"
-    react-transition-group "^4.4.5"
 
 "@consta/uikit@^4.19.0":
   version "4.19.0"
