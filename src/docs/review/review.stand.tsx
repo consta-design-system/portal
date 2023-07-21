@@ -4,5 +4,5 @@ export default createStand({
   title: 'Ревью кода',
   id: 'review',
   group: 'contributers',
-  order: 470,
+  order: 480,
 });

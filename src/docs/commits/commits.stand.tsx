@@ -4,5 +4,5 @@ export default createStand({
   title: 'Правила оформления коммитов',
   id: 'commits',
   group: 'contributers',
-  order: 460,
+  order: 470,
 });

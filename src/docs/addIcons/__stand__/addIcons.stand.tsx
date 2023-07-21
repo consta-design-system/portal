@@ -4,5 +4,5 @@ export default createStand({
   title: 'Создание иконок',
   id: 'addIcons',
   group: 'contributers',
-  order: 440,
+  order: 450,
 });
