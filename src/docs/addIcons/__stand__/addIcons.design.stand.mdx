@@ -6,7 +6,7 @@ import Icon3 from './components/InstructionPictures/images/Icon3.image.svg';
 import Icon5 from './components/InstructionPictures/images/Icon5.image.svg';
 import Icon6 from './components/InstructionPictures/images/Icon6.image.svg';
 
-> Это инструкция по добавлению новых иконок в библиотеки в Figma и в код. Если вам нужна автоматическая генерация компонентов из SVG, загляните в [эту инструкцию](##LIBS.LIB.STAND.TAB/lib:portal/stand:custom-addicons/tab:dev)
+> Это инструкция по добавлению новых иконок в библиотеки в Figma и в код. Если вам нужна автоматическая генерация компонентов из SVG, загляните в [эту инструкцию](##LIBS.LIB.STAND.TAB/lib:portal/stand:contributers-addicons/tab:dev)
 
 - [Правила отрисовки](#правила-отрисовки)
 - [Правила работы с библиотекой](#правила-работы-с-библиотекой)
@@ -30,6 +30,8 @@ import Icon6 from './components/InstructionPictures/images/Icon6.image.svg';
 
 Готовая иконка должна быть одним шейпом с заливкой.
 
+Охранное поле по краям иконок в размерах XS и S — 1px, в размере M и L — 2px.
+
 <InstructionPictures name="4-figma-union" />
 
 Координаты точек фигур иконки должны быть выровнены по пиксельной сетке.
@@ -40,6 +42,10 @@ import Icon6 from './components/InstructionPictures/images/Icon6.image.svg';
 
 Обязательно нужно отрисовывать иконку сразу в трех размерах. Иначе кому-то потом придется это делать за вас.
 Иконки, которые ждут изменений, красятся в цвет `warning`, а новые, ещё не добавленные в библиотеку — в `alert`.
+
+Иконки должны иметь один векторный слой с названием Vector. Это нужно, чтобы замене одной иконки на другую, стили наследовались корректно.
+
+Размер L используется в библиотеке компонентов для мобильных приложений, либо в ситуациях, когда нужно добавить иконку, например, к заголовку, а размер M слишком мал. Внутри компонентов библиотеки Consta UI-kit размер L использовать не допускается.
 
 <Icon6 />
 
