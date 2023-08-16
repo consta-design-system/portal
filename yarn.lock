@@ -1734,10 +1734,10 @@
   dependencies:
     chalk "^4.1.0"
 
-"@consta/charts@^0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@consta/charts/-/charts-0.7.2.tgz#1576dc8f745d5263ebc830bef79132940202d4a7"
-  integrity sha512-lC3+GKOO6QCB3etmqebgapGJ8F9gg21NqqLD8pttIf9n1en3aASSXhrZTyGf84NzRJk3NRc5XK/+URU28NLOpw==
+"@consta/charts@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@consta/charts/-/charts-0.8.0.tgz#fd4a3cccf3693b9b74e3f3903165a320fcc031b0"
+  integrity sha512-UjIa205C7mDiL+dPUljfUrjkMkZAG2LdwLMoyuJmlUm4DlZUctI28EY7ylNomWg+LsO+rtijuU9yQvUiHn5qCA==
   dependencies:
     "@antv/g2plot" "2.4.7"
 
@@ -1755,6 +1755,11 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@consta/icons/-/icons-0.7.0.tgz#3598732b9ec5a22d586f8eb06c38603e86e74576"
   integrity sha512-+z96Ams4ZnOeZtNhsVQpsarlpmv7wNDA+sfu3AVvAP0h+K7zCPU7BYcQppek71najQkxqpsngjznB7G8IbA4RA==
+
+"@consta/icons@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@consta/icons/-/icons-0.9.0.tgz#6f5af9e85176b545c9032ffd0fbfa0386e08dae3"
+  integrity sha512-a8etwnWHbiKSUirXPD1pAKt+jdYmP1wexn2tLsIQRUNPlZdvUDmq0gpWOKh6TrEW2AThn4ClYPfgefkFyzcjfw==
 
 "@consta/stand@^0.0.118":
   version "0.0.118"
@@ -1840,6 +1845,22 @@
     "@bem-react/classname" "^1.5.12"
     "@bem-react/classnames" "^1.3.10"
     "@consta/icons" "^0.5.2"
+    compute-scroll-into-view "^1.0.17"
+    date-fns "^2.29.1"
+    focus-trap-react "8.7.0"
+    imask "^6.4.3"
+    react-dropzone "11.3.4"
+    react-textarea-autosize "^8.3.4"
+    react-transition-group "^4.4.5"
+
+"@consta/uikit@^4.25.0":
+  version "4.25.0"
+  resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-4.25.0.tgz#895b8370f845cb8834d781525c46d612a041c9f6"
+  integrity sha512-V7nwAQ4KSDFM92xW7DLwDQo8CkgPp3hv2PE5PTfmqjZt1DjqVco1n3qWRxxsHcqdyyVSU9gFzhtUp+tP32rAcg==
+  dependencies:
+    "@bem-react/classname" "^1.5.12"
+    "@bem-react/classnames" "^1.3.10"
+    "@consta/icons" "^0.9.0"
     compute-scroll-into-view "^1.0.17"
     date-fns "^2.29.1"
     focus-trap-react "8.7.0"
