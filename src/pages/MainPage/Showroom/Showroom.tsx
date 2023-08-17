@@ -1,28 +1,28 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { IconComponent } from '@consta/icons/Icon';
+import { IconAdd } from '@consta/icons/IconAdd';
+import { IconArrowLeft } from '@consta/icons/IconArrowLeft';
+import { IconArrowRight } from '@consta/icons/IconArrowRight';
+import { IconBento } from '@consta/icons/IconBento';
+import { IconCamera } from '@consta/icons/IconCamera';
+import { IconCheck } from '@consta/icons/IconCheck';
+import { IconClose } from '@consta/icons/IconClose';
+import { IconDiamond } from '@consta/icons/IconDiamond';
+import { IconDownload } from '@consta/icons/IconDownload';
+import { IconEdit } from '@consta/icons/IconEdit';
+import { IconEye } from '@consta/icons/IconEye';
+import { IconForward } from '@consta/icons/IconForward';
+import { IconHamburger } from '@consta/icons/IconHamburger';
+import { IconList } from '@consta/icons/IconList';
+import { IconPlay } from '@consta/icons/IconPlay';
+import { IconSearchStroked } from '@consta/icons/IconSearchStroked';
+import { IconSelect } from '@consta/icons/IconSelect';
+import { IconSettings } from '@consta/icons/IconSettings';
 import { Avatar } from '@consta/uikit/Avatar';
 import { Badge } from '@consta/uikit/Badge';
 import { Button } from '@consta/uikit/Button';
 import { ChoiceGroup } from '@consta/uikit/ChoiceGroup';
-import { IconComponent } from '@consta/uikit/Icon';
-import { IconAdd } from '@consta/uikit/IconAdd';
-import { IconArrowLeft } from '@consta/uikit/IconArrowLeft';
-import { IconArrowRight } from '@consta/uikit/IconArrowRight';
-import { IconBento } from '@consta/uikit/IconBento';
-import { IconCamera } from '@consta/uikit/IconCamera';
-import { IconCheck } from '@consta/uikit/IconCheck';
-import { IconClose } from '@consta/uikit/IconClose';
-import { IconDiamond } from '@consta/uikit/IconDiamond';
-import { IconDownload } from '@consta/uikit/IconDownload';
-import { IconEdit } from '@consta/uikit/IconEdit';
-import { IconEye } from '@consta/uikit/IconEye';
-import { IconForward } from '@consta/uikit/IconForward';
-import { IconHamburger } from '@consta/uikit/IconHamburger';
-import { IconList } from '@consta/uikit/IconList';
-import { IconPlay } from '@consta/uikit/IconPlay';
-import { IconSearch } from '@consta/uikit/IconSearch';
-import { IconSelect } from '@consta/uikit/IconSelect';
-import { IconSettings } from '@consta/uikit/IconSettings';
 import { Select } from '@consta/uikit/Select';
 import { Switch } from '@consta/uikit/Switch';
 import { Tag } from '@consta/uikit/Tag';
@@ -481,7 +481,7 @@ export const Showroom: React.FC = () => {
             size="xs"
             form="brick"
             view="secondary"
-            iconRight={IconSearch}
+            iconRight={IconSearchStroked}
           />
           <ChoiceGroup
             name="CG3"

@@ -4,6 +4,7 @@ import { IconComponent } from '@consta/icons/Icon';
 import { Card } from '@consta/uikit/Card';
 import { cnMixSpace } from '@consta/uikit/MixSpace';
 import { Text } from '@consta/uikit/Text';
+import { useTheme } from '@consta/uikit/Theme';
 import React from 'react';
 
 import { cn } from '##/utils/bem';
@@ -24,6 +25,7 @@ type Props = {
 
 export const FeedbackCard = (props: Props) => {
   const { icon: Icon, title, message, className, button, size = 'm' } = props;
+  const { themeClassNames } = useTheme();
   return (
     <Card
       verticalSpace="2xl"
@@ -33,12 +35,17 @@ export const FeedbackCard = (props: Props) => {
       className={cnFeedbackCard(null, [className])}
     >
       {Icon && (
-        <Icon
-          size="l"
+        <div
           className={cnFeedbackCard('Image', [
             cnMixSpace({ mB: size === 'm' ? 'xl' : 'l' }),
           ])}
-        />
+        >
+          <Icon
+            size="m"
+            view="primary"
+            className={themeClassNames.color.accent}
+          />
+        </div>
       )}
       <Text
         className={cnFeedbackCard('Title')}

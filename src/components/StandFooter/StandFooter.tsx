@@ -11,7 +11,7 @@ import { useAtom } from '@reatom/npm-react';
 import React, { useRef } from 'react';
 
 import { StandFeedback } from '##/components/StandFeedback';
-import IconConsta from '##/icons/Consta.icon.svg';
+import IconConsta from '##/icons/Consta.colorIcon.svg';
 import { cn } from '##/utils/bem';
 
 const gitHubUrl = 'https://github.com/consta-design-system/';

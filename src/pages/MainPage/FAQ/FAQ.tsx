@@ -1,6 +1,6 @@
 import './FAQ.css';
 
-import { IconAdd } from '@consta/uikit/IconAdd';
+import { IconAdd } from '@consta/icons/IconAdd';
 import { Text } from '@consta/uikit/Text';
 import React, { useState } from 'react';
 

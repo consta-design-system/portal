@@ -6,7 +6,7 @@ import { Text } from '@consta/uikit/Text';
 import { useTheme } from '@consta/uikit/Theme';
 import React from 'react';
 
-import IconFigma from '##/icons/Figma.icon.svg';
+import IconFigma from '##/icons/Figma.colorIcon.svg';
 import IconGithub from '##/icons/Github.icon.svg';
 import IconStorybook from '##/icons/Storybook.icon.svg';
 import {

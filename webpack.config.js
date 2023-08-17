@@ -209,6 +209,43 @@ module.exports = function () {
           },
         },
         {
+          test: /\.colorIcon\.svg$/,
+          use: [
+            {
+              loader: '@svgr/webpack',
+              options: {
+                template: (
+                  { imports, componentName, props, jsx, exports },
+                  { tpl },
+                ) => {
+                  return tpl`
+                              ${imports}
+                              import { createIcon } from '@consta/icons/Icon';
+
+                              const Icon = (${props}) => {
+                                props = { ...props };
+                                return ${jsx};
+                              };
+
+                              export default createIcon({
+                                l: Icon,
+                                m: Icon,
+                                s: Icon,
+                                xs: Icon,
+                                name: '${componentName}',
+                                renderType: { l: 'default', m: 'default', s: 'default', xs: 'default' },
+                                color: 'multiple',
+                              });
+                        `;
+                },
+                plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
+                dimensions: false,
+                svgo: true,
+              },
+            },
+          ],
+        },
+        {
           test: /\.icon\.svg$/,
           use: [
             {
@@ -220,7 +257,7 @@ module.exports = function () {
                 ) => {
                   return tpl`
                               ${imports}
-                              import { createIcon } from '@consta/uikit/createIcon';
+                              import { createIcon } from '@consta/icons/Icon';
 
                               const Icon = (${props}) => {
                                 props = { ...props };
@@ -228,10 +265,13 @@ module.exports = function () {
                               };
 
                               export default createIcon({
+                                l: Icon,
                                 m: Icon,
                                 s: Icon,
                                 xs: Icon,
-                                name: 'Icon',
+                                name: '${componentName}',
+                                renderType: { l: 'use', m: 'use', s: 'use', xs: 'use' },
+                                color: 'mono',
                               });
                         `;
                 },
