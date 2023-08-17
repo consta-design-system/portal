@@ -1,9 +1,9 @@
 import './Example.css';
 
+import { IconBookmarkStroked } from '@consta/icons/IconBookmarkStroked';
 import { Badge } from '@consta/uikit/Badge';
 import { Button } from '@consta/uikit/Button';
 import { ChoiceGroup } from '@consta/uikit/ChoiceGroup';
-import { IconBookmarkStroked } from '@consta/uikit/IconBookmarkStroked';
 import { Text } from '@consta/uikit/Text';
 import { TextField } from '@consta/uikit/TextField';
 import { useTheme } from '@consta/uikit/Theme';

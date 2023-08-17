@@ -12,11 +12,11 @@ import './Theme_space_gpnPromo.css';
 import './Theme_control_gpnPromo.css';
 import './Theme_size_gpnResponsive.css';
 
+import { IconComponent } from '@consta/icons/Icon';
+import { IconFavoriteFilled } from '@consta/icons/IconFavoriteFilled';
+import { IconMoon } from '@consta/icons/IconMoon';
+import { IconSun } from '@consta/icons/IconSun';
 import { themeAtom as standThemeAtom } from '@consta/stand/src/modules/theme';
-import { IconComponent } from '@consta/uikit/Icon';
-import { IconFavorite } from '@consta/uikit/IconFavorite';
-import { IconMoon } from '@consta/uikit/IconMoon';
-import { IconSun } from '@consta/uikit/IconSun';
 // импортируем пресеты чтобы подключились стили к проекту
 import {
   presetGpnDark,
@@ -72,7 +72,7 @@ export const colors: Colors[] = [
   },
   {
     label: 'Промо',
-    icon: IconFavorite,
+    icon: IconFavoriteFilled,
     value: 2,
   },
 ];

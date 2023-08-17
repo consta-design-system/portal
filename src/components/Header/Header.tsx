@@ -1,8 +1,8 @@
 /* eslint-disable no-nested-ternary */
 import './Header.css';
 
+import { IconProps } from '@consta/icons/Icon';
 import { PropsWithHTMLAttributesAndRef } from '@consta/uikit/__internal__/src/utils/types/PropsWithHTMLAttributes';
-import { IconProps } from '@consta/uikit/Icon';
 import { Text } from '@consta/uikit/Text';
 import React from 'react';
 

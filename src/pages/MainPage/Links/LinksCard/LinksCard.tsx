@@ -1,8 +1,8 @@
 import './LinksCard.css';
 
+import { IconProps } from '@consta/icons/Icon';
+import { IconOpenInNew } from '@consta/icons/IconOpenInNew';
 import { PropsWithJsxAttributes } from '@consta/uikit/__internal__/src/utils/types/PropsWithJsxAttributes';
-import { IconProps } from '@consta/uikit/Icon';
-import { IconOpenInNew } from '@consta/uikit/IconOpenInNew';
 import { Text } from '@consta/uikit/Text';
 import React from 'react';
 
