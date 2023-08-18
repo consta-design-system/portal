@@ -105,6 +105,24 @@ const modulesCacheGroups = (repos) => {
   return cacheGroups;
 };
 
+const getHashByString = (src) => {
+  let hash = 0;
+  let i;
+  let chr;
+  if (src.length === 0) return hash;
+  for (i = 0; i < src.length; i++) {
+    chr = src.charCodeAt(i);
+    // eslint-disable-next-line no-bitwise
+    hash = (hash << 5) - hash + chr;
+    // eslint-disable-next-line no-bitwise
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+};
+
+const getJsxHash = (jsx) =>
+  getHashByString(JSON.stringify(jsx)).toString().replace('-', '0');
+
 module.exports = function () {
   return {
     target: 'web',
@@ -218,6 +236,8 @@ module.exports = function () {
                   { imports, componentName, props, jsx, exports },
                   { tpl },
                 ) => {
+                  const hash = getJsxHash(jsx);
+
                   return tpl`
                               ${imports}
                               import { createIcon } from '@consta/icons/Icon';
@@ -232,7 +252,7 @@ module.exports = function () {
                                 m: Icon,
                                 s: Icon,
                                 xs: Icon,
-                                name: 'Portal' + '${componentName}',
+                                name: '${componentName}' + '-' + '${hash}',
                                 renderType: { l: 'default', m: 'default', s: 'default', xs: 'default' },
                                 color: 'multiple',
                               });
@@ -255,6 +275,8 @@ module.exports = function () {
                   { imports, componentName, props, jsx, exports },
                   { tpl },
                 ) => {
+                  const hash = getJsxHash(jsx);
+
                   return tpl`
                               ${imports}
                               import { createIcon } from '@consta/icons/Icon';
@@ -269,7 +291,7 @@ module.exports = function () {
                                 m: Icon,
                                 s: Icon,
                                 xs: Icon,
-                                name: 'Portal' + '${componentName}',
+                                name: '${componentName}' + '-' + '${hash}',
                                 renderType: { l: 'use', m: 'use', s: 'use', xs: 'use' },
                                 color: 'mono',
                               });
