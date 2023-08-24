@@ -1,13 +1,13 @@
 import './StandFeedback.css';
 
 import { IconChatFilled } from '@consta/icons/IconChatFilled';
-import { IconGitHub } from '@consta/icons/IconGitHub';
 import { breakpointsAtom } from '@consta/stand/src/modules/breakpoints';
 import { addPrefix } from '@consta/uikit/useBreakpoints';
 import { useAtom } from '@reatom/npm-react';
 import React from 'react';
 
 import { FeedbackCard } from '##/components/FeedbackCard';
+import IconGitHub from '##/icons/Github.icon.svg';
 import { cn } from '##/utils/bem';
 
 const cnStandFeedback = cn('StandFeedback');
