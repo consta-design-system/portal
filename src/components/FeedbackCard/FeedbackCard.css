@@ -1,10 +1,12 @@
 .portal--FeedbackCard {
   &-Image {
+    display: flex;
     overflow: hidden;
-    min-width: var(--space-4xl);
-    max-width: var(--space-4xl);
-    min-height: var(--space-4xl);
-    max-height: var(--space-4xl);
+    justify-content: center;
+    align-items: center;
+    width: var(--space-3xl);
+    height: var(--space-3xl);
+    background: linear-gradient(180deg, #0f9fff -19.65%, #0071b3 100.13%);
     border-radius: 50%;
   }
 

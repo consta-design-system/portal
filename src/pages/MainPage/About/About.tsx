@@ -1,14 +1,14 @@
 import './About.css';
 
+import { IconForward } from '@consta/icons/IconForward';
+import { IconThumbUp } from '@consta/icons/IconThumbUp';
 import { useLink } from '@consta/stand/src/hooks/useLink';
 import { routesNames } from '@consta/stand/src/modules/router';
-import { IconForward } from '@consta/uikit/IconForward';
-import { IconThumbUp } from '@consta/uikit/IconThumbUp';
 import { Text } from '@consta/uikit/Text';
 import { useTheme } from '@consta/uikit/Theme';
 import React, { Fragment } from 'react';
 
-import IconFigma from '##/icons/Figma.icon.svg';
+import IconFigma from '##/icons/FigmaMono.icon.svg';
 import IconGithub from '##/icons/Github.icon.svg';
 import IconStorybook from '##/icons/Storybook.icon.svg';
 import {

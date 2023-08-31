@@ -10,11 +10,16 @@ declare module '*.image.svg' {
 }
 
 declare module '*.icon.svg' {
-  import { IconProps } from '@consta/uikit/Icon';
+  import { IconComponent } from '@consta/icons/Icon';
 
-  export const ReactComponent: React.FC<IconProps>;
+  const src: IconComponent;
+  export default src;
+}
 
-  const src: React.FC<IconProps>;
+declare module '*.colorIcon.svg' {
+  import { IconComponent } from '@consta/icons/Icon';
+
+  const src: IconComponent;
   export default src;
 }
 

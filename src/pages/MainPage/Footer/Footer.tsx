@@ -1,6 +1,6 @@
 import './Footer.css';
 
-import { IconOpenInNew } from '@consta/uikit/IconOpenInNew';
+import { IconOpenInNew } from '@consta/icons/IconOpenInNew';
 import { Text } from '@consta/uikit/Text';
 import React from 'react';
 

@@ -10,7 +10,7 @@ import { useAction } from '@reatom/npm-react';
 import React, { useEffect, useRef } from 'react';
 
 import { Picture } from '##/components/Picture/Picture';
-import IconFigma from '##/icons/Figma.icon.svg';
+import IconFigma from '##/icons/FigmaMono.icon.svg';
 import IconGithub from '##/icons/Github.icon.svg';
 import ConstaLogo from '##/images/ConstaLogo.image.svg';
 import AltHeroImage_375_1x_dark from '##/images/HeroImage/Alt/Dark/HeroImage_375_1x.jpg';

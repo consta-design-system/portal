@@ -105,6 +105,24 @@ const modulesCacheGroups = (repos) => {
   return cacheGroups;
 };
 
+const getHashByString = (src) => {
+  let hash = 0;
+  let i;
+  let chr;
+  if (src.length === 0) return hash;
+  for (i = 0; i < src.length; i++) {
+    chr = src.charCodeAt(i);
+    // eslint-disable-next-line no-bitwise
+    hash = (hash << 5) - hash + chr;
+    // eslint-disable-next-line no-bitwise
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+};
+
+const getJsxHash = (jsx) =>
+  getHashByString(JSON.stringify(jsx)).toString().replace('-', '0');
+
 module.exports = function () {
   return {
     target: 'web',
@@ -209,6 +227,45 @@ module.exports = function () {
           },
         },
         {
+          test: /\.colorIcon\.svg$/,
+          use: [
+            {
+              loader: '@svgr/webpack',
+              options: {
+                template: (
+                  { imports, componentName, props, jsx, exports },
+                  { tpl },
+                ) => {
+                  const hash = getJsxHash(jsx);
+
+                  return tpl`
+                              ${imports}
+                              import { createIcon } from '@consta/icons/Icon';
+
+                              const Icon = (${props}) => {
+                                props = { ...props };
+                                return ${jsx};
+                              };
+
+                              export default createIcon({
+                                l: Icon,
+                                m: Icon,
+                                s: Icon,
+                                xs: Icon,
+                                name: '${componentName}' + '-' + '${hash}',
+                                renderType: { l: 'default', m: 'default', s: 'default', xs: 'default' },
+                                color: 'multiple',
+                              });
+                        `;
+                },
+                plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
+                dimensions: false,
+                svgo: true,
+              },
+            },
+          ],
+        },
+        {
           test: /\.icon\.svg$/,
           use: [
             {
@@ -218,9 +275,11 @@ module.exports = function () {
                   { imports, componentName, props, jsx, exports },
                   { tpl },
                 ) => {
+                  const hash = getJsxHash(jsx);
+
                   return tpl`
                               ${imports}
-                              import { createIcon } from '@consta/uikit/createIcon';
+                              import { createIcon } from '@consta/icons/Icon';
 
                               const Icon = (${props}) => {
                                 props = { ...props };
@@ -228,10 +287,13 @@ module.exports = function () {
                               };
 
                               export default createIcon({
+                                l: Icon,
                                 m: Icon,
                                 s: Icon,
                                 xs: Icon,
-                                name: 'Icon',
+                                name: '${componentName}' + '-' + '${hash}',
+                                renderType: { l: 'use', m: 'use', s: 'use', xs: 'use' },
+                                color: 'mono',
                               });
                         `;
                 },
