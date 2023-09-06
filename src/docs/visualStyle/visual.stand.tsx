@@ -1,8 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Consta for Community (SLA)',
-  id: 'sla',
+  title: 'Визуальный язык',
+  id: 'visualStyle',
   group: 'startwork',
-  order: 160,
+  order: 140,
 });

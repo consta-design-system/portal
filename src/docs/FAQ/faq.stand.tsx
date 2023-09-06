@@ -4,6 +4,6 @@ export default createStand({
   title: 'Вопросы и ответы',
   id: 'FAQ',
   group: 'startwork',
-  order: 140,
+  order: 150,
   description: 'Посмотрите наш специальный гайд по навигации',
 });
