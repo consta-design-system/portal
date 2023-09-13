@@ -26,6 +26,7 @@ import {
 } from '@consta/uikit/Theme';
 import { atom } from '@reatom/core';
 import { onUpdate, withInit } from '@reatom/hooks';
+import { withSessionStorage } from '@reatom/persist-web-storage';
 
 export type Preset = {
   name: string;
@@ -157,7 +158,9 @@ const colorsMods = [
 const getColorMod = (preset: Preset, color: Colors): ThemePreset['color'] =>
   colorsMods[preset.value][color.value];
 
-export const presetAtom = atom(presetDefault);
+export const presetAtom = atom(presetDefault).pipe(
+  withSessionStorage('portalThemePresetAtom'),
+);
 export const colorAtom = atom(colorDefault).pipe(
   withInit((ctx) => {
     if (ctx.get(standThemeAtom).color.primary === 'gpnDefault') {
@@ -165,10 +168,17 @@ export const colorAtom = atom(colorDefault).pipe(
     }
     return colors[1];
   }),
+  withSessionStorage('themeColorAtom'),
 );
-export const fontAtom = atom(fontDefault);
-export const sizeAtom = atom(sizeDefault);
-export const spaceAtom = atom(spaceDefault);
+export const fontAtom = atom(fontDefault).pipe(
+  withSessionStorage('portalThemeFontAtom'),
+);
+export const sizeAtom = atom(sizeDefault).pipe(
+  withSessionStorage('portalThemeColorAtom'),
+);
+export const spaceAtom = atom(spaceDefault).pipe(
+  withSessionStorage('portalThemeColorAtom'),
+);
 
 export const themeAtom = atom((ctx) => {
   return {
@@ -182,9 +192,33 @@ export const themeAtom = atom((ctx) => {
 });
 
 onUpdate(colorAtom, (ctx, color) => {
-  standThemeAtom(ctx, color.value === 0 ? presetGpnDefault : presetGpnDark);
+  const standTheme = ctx.get(standThemeAtom);
+  if (
+    standTheme.color.primary === presetGpnDefault.color.primary &&
+    color.value !== colors[0].value
+  ) {
+    standThemeAtom(ctx, presetGpnDark);
+  }
+  if (
+    standTheme.color.primary === presetGpnDark.color.primary &&
+    color.value === colors[0].value
+  ) {
+    standThemeAtom(ctx, presetGpnDefault);
+  }
 });
 
 onUpdate(standThemeAtom, (ctx, theme) => {
-  colorAtom(ctx, theme.color.primary === 'gpnDefault' ? colors[0] : colors[1]);
+  const color = ctx.get(colorAtom);
+  if (
+    theme.color.primary === presetGpnDefault.color.primary &&
+    (color.value === colors[1].value || color.value === colors[2].value)
+  ) {
+    colorAtom(ctx, colors[0]);
+  }
+  if (
+    theme.color.primary === presetGpnDark.color.primary &&
+    color.value === colors[0].value
+  ) {
+    colorAtom(ctx, colors[1]);
+  }
 });
