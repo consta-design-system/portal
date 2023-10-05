@@ -1854,10 +1854,10 @@
     react-textarea-autosize "^8.3.4"
     react-transition-group "^4.4.5"
 
-"@consta/uikit@^4.31.1":
-  version "4.31.1"
-  resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-4.31.1.tgz#1f953e114c7a4569a88bd3a48c163f9297657b21"
-  integrity sha512-Jzdg1/wDD85oQSWet28w3gYFQdJacO5Y8Vhzkg7yGliPkyfBXi9+jbpATjwA3kQeXR9Wc01894qqs27L8ewUCg==
+"@consta/uikit@^4.31.2":
+  version "4.31.2"
+  resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-4.31.2.tgz#bcd0bf53b5f093f2b6770bcd5a497b2b533d2c25"
+  integrity sha512-pfytfWdc4zREe35Ew8WgH59XzI6Gdcf4LffKAcAQvO0l0wpjPDActNUoAKVg96Bnos5GhGVo5q8XSn65qzZs3Q==
   dependencies:
     "@bem-react/classname" "^1.5.12"
     "@bem-react/classnames" "^1.3.10"
