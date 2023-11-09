@@ -9,8 +9,8 @@ import { subscribeToExternalTransitions } from '##/modules/spa/subscribeToExtern
 
 // Подписка на любой переход по страницам
 export const routeEvent = () => {
-  const spa = ctx.get(spaAtom);
   ctx.subscribe(transitionSuccessAction, ([data]) => {
+    const spa = ctx.get(spaAtom);
     if (spa && data?.params[0].toState) {
       spa.sendEvent(1, {
         customparams: routeToCustomParam(data.params[0].toState),
