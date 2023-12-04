@@ -1,6 +1,6 @@
 import './LinksCard.css';
 
-import { IconProps } from '@consta/icons/Icon';
+import { IconComponent } from '@consta/icons/Icon';
 import { IconOpenInNew } from '@consta/icons/IconOpenInNew';
 import { PropsWithJsxAttributes } from '@consta/uikit/__internal__/src/utils/types/PropsWithJsxAttributes';
 import { Text } from '@consta/uikit/Text';
@@ -15,7 +15,7 @@ type Props = PropsWithJsxAttributes<
     view: 'storybook' | 'figma' | 'github';
     title: string;
     description: string;
-    icon: React.FC<IconProps>;
+    icon: IconComponent;
     children?: never;
     hrefKit: string;
     buttonClick?: React.MouseEventHandler;

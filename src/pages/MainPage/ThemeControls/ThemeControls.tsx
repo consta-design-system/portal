@@ -52,7 +52,7 @@ export const ThemeControls: React.FC = () => {
             value={preset}
             getLabel={(item) => item.name}
             getBrandColor={(item) => item.brandColor}
-            onChange={({ value }) => setPreset(value)}
+            onChange={setPreset}
           />
         </div>
         <div className={cnControls('Item', ['decorator decorator_indent-b_l'])}>
@@ -69,7 +69,7 @@ export const ThemeControls: React.FC = () => {
             view="ghost"
             name="ColorThemes"
             value={color}
-            onChange={({ value }) => setColor(value)}
+            onChange={setColor}
             items={colors}
             size="m"
             iconSize="m"
@@ -94,7 +94,7 @@ export const ThemeControls: React.FC = () => {
             view="ghost"
             name="FontThemes"
             value={font}
-            onChange={({ value }) => setFont(value)}
+            onChange={setFont}
             items={fonts}
             size="m"
             width="full"
@@ -120,7 +120,7 @@ export const ThemeControls: React.FC = () => {
             view="ghost"
             name="SizeThemes"
             value={size}
-            onChange={({ value }) => setSize(value)}
+            onChange={setSize}
             items={sizes}
             size="m"
             width="full"
@@ -143,7 +143,7 @@ export const ThemeControls: React.FC = () => {
             view="ghost"
             name="SpaceThemes"
             value={space}
-            onChange={({ value }) => setSpace(value)}
+            onChange={setSpace}
             items={spaces}
             size="m"
             width="full"

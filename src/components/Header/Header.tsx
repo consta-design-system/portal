@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import './Header.css';
 
-import { IconProps } from '@consta/icons/Icon';
+import { IconComponent } from '@consta/icons/Icon';
 import { PropsWithHTMLAttributesAndRef } from '@consta/uikit/__internal__/src/utils/types/PropsWithHTMLAttributes';
 import { Text } from '@consta/uikit/Text';
 import React from 'react';
@@ -16,7 +16,7 @@ export type HeaderProps = PropsWithHTMLAttributesAndRef<
     logoLink?: string;
     menu?: {
       label: string;
-      icon: React.FC<IconProps>;
+      icon: IconComponent;
       link: string;
       onlyIcon: boolean;
       onClick?: React.MouseEventHandler;

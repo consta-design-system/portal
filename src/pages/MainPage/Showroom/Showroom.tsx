@@ -83,7 +83,7 @@ export const Showroom: React.FC = () => {
           <ChoiceGroup
             name="CG3"
             value={valueCG3}
-            onChange={({ value }) => setValueCG3(value)}
+            onChange={setValueCG3}
             items={CG3}
             getItemLabel={getItem}
             form="round"
@@ -220,7 +220,7 @@ export const Showroom: React.FC = () => {
           <ChoiceGroup
             name="CG1"
             value={valueCG1}
-            onChange={({ value }) => setValueCG1(value)}
+            onChange={setValueCG1}
             items={CG1}
             getItemLabel={getItem}
             size="m"
@@ -238,7 +238,7 @@ export const Showroom: React.FC = () => {
           <ChoiceGroup
             name="CG2"
             value={valueCG2}
-            onChange={({ value }) => setValueCG2(value)}
+            onChange={setValueCG2}
             items={CG2}
             getItemLabel={getItem}
             size="m"
@@ -307,7 +307,7 @@ export const Showroom: React.FC = () => {
           <ChoiceGroup
             name="CG4"
             value={valueCG4}
-            onChange={({ value }) => setValueCG4(value)}
+            onChange={setValueCG4}
             items={CG4}
             getItemLabel={getItem}
             size="s"
@@ -350,7 +350,7 @@ export const Showroom: React.FC = () => {
           <ChoiceGroup
             name="CG5"
             value={valueCG5}
-            onChange={({ value }) => setValueCG5(value)}
+            onChange={setValueCG5}
             items={CG5}
             getItemLabel={getItem}
             size="xs"
@@ -418,7 +418,7 @@ export const Showroom: React.FC = () => {
           <ChoiceGroup
             name="CG6"
             value={valueCG6}
-            onChange={({ value }) => setValueCG6(value)}
+            onChange={setValueCG6}
             items={CG6}
             size="xs"
             view="secondary"
@@ -486,7 +486,7 @@ export const Showroom: React.FC = () => {
           <ChoiceGroup
             name="CG3"
             value={valueCG3}
-            onChange={({ value }) => setValueCG3(value)}
+            onChange={setValueCG3}
             items={CG3}
             getItemLabel={getItem}
             size="xs"

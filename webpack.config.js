@@ -220,10 +220,9 @@ module.exports = function () {
             /\.woff$/,
             /\.woff2$/,
           ],
-          loader: require.resolve('url-loader'),
-          options: {
-            limit: false,
-            name: 'static/media/[name].[hash:8].[ext]',
+          type: 'asset/resource',
+          generator: {
+            filename: 'static/[name]__[hash:8][ext]',
           },
         },
         {

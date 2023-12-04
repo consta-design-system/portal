@@ -13,10 +13,12 @@ type PresetListProps<ITEM> = {
   items: ITEM[];
   getLabel: (item: ITEM) => string;
   getBrandColor: (item: ITEM) => string;
-  onChange: (props: {
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>;
-    value: ITEM;
-  }) => void;
+  onChange: (
+    value: ITEM,
+    props: {
+      e: React.MouseEvent<HTMLButtonElement, MouseEvent>;
+    },
+  ) => void;
   className?: string;
 };
 

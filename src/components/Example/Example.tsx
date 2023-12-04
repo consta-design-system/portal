@@ -76,7 +76,7 @@ export const Example: React.FC = () => {
         <ChoiceGroup
           name="CG"
           value={valueCG}
-          onChange={({ value }) => setValueCG(value)}
+          onChange={setValueCG}
           items={CG}
           getItemLabel={(item) => item}
           view="secondary"
@@ -90,7 +90,6 @@ export const Example: React.FC = () => {
             size="l"
             placeholder="Допустим, длина"
             rightSide="м"
-            width="full"
             form="defaultClear"
             style={{ width: '50%' }}
           />
@@ -98,7 +97,6 @@ export const Example: React.FC = () => {
             size="l"
             placeholder="и вес"
             rightSide="кг"
-            width="full"
             form="brickDefault"
             style={{ width: '50%' }}
           />
