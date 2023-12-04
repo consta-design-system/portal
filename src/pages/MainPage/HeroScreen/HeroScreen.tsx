@@ -79,7 +79,10 @@ export const HeroScreen: React.FC = () => {
   const [componentsLink, componentsOnClick] = useLink({
     to: routesNames.LIBS,
   });
-  const breakpoints = useBreakpoints({ bigPhone: 400 });
+  const breakpoints = useBreakpoints({
+    map: { bigPhone: 400 },
+    isActive: true,
+  });
   const buttonSize = breakpoints.bigPhone ? 'l' : 'm';
 
   useEffect(() => {

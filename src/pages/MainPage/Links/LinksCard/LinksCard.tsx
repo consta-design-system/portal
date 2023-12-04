@@ -1,9 +1,9 @@
 import './LinksCard.css';
 
-import { IconProps } from '@consta/icons/Icon';
+import { IconComponent } from '@consta/icons/Icon';
 import { IconOpenInNew } from '@consta/icons/IconOpenInNew';
 import { PropsWithJsxAttributes } from '@consta/uikit/__internal__/src/utils/types/PropsWithJsxAttributes';
-import { Text } from '@consta/uikit/Text';
+import { cnText, Text } from '@consta/uikit/Text';
 import React from 'react';
 
 import { cn } from '##/utils/bem';
@@ -15,7 +15,7 @@ type Props = PropsWithJsxAttributes<
     view: 'storybook' | 'figma' | 'github';
     title: string;
     description: string;
-    icon: React.FC<IconProps>;
+    icon: IconComponent;
     children?: never;
     hrefKit: string;
     buttonClick?: React.MouseEventHandler;
@@ -36,7 +36,13 @@ export const LinksCard: React.FC<Props> = (props) => {
   } = props;
 
   return (
-    <div {...otherProps} className={cnLinksCard({ view }, [className])}>
+    <div
+      {...otherProps}
+      className={cnLinksCard({ view }, [
+        className,
+        cnText({ view: 'primary' }),
+      ])}
+    >
       <div className={cnLinksCard('Content')}>
         <Icon size="m" view="primary" className={cnLinksCard('Logo')} />
         <Text
@@ -71,6 +77,7 @@ export const LinksCard: React.FC<Props> = (props) => {
             ])}
             size="l"
             as="span"
+            view="primary"
           >
             Смотреть
           </Text>

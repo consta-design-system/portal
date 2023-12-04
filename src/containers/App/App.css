@@ -124,7 +124,10 @@ p {
 .portal--App {
   overflow: hidden;
   min-height: 100vh;
+  color: var(--color-typo-primary);
   background-color: var(--color-bg-default);
+  font-size: var(--size-text-m);
+  line-height: var(--line-height-text-m);
 }
 
 .portal--App-UpdateBrowser {

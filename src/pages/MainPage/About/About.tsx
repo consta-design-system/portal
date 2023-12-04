@@ -4,7 +4,7 @@ import { IconForward } from '@consta/icons/IconForward';
 import { IconThumbUp } from '@consta/icons/IconThumbUp';
 import { useLink } from '@consta/stand/src/hooks/useLink';
 import { routesNames } from '@consta/stand/src/modules/router';
-import { Text } from '@consta/uikit/Text';
+import { cnText, Text } from '@consta/uikit/Text';
 import { useTheme } from '@consta/uikit/Theme';
 import React, { Fragment } from 'react';
 
@@ -122,7 +122,7 @@ export const About: React.FC = () => {
                 className={cnLinks(
                   'Item',
                   { to: `${item.icon[0].toUpperCase()}${item.icon.slice(1)}` },
-                  [item.additionalClassNames],
+                  [item.additionalClassNames, cnText({ view: 'primary' })],
                 )}
                 onClick={item.onClick}
                 rel="noreferrer"
