@@ -71,15 +71,9 @@ export const Links: React.FC = () => {
         </div>
       </div>
       <div className="decorator decorator_distribute_center decorator_vertical_align_baseline">
-        <Text size="xl" view="secondary" as="p" align="center">
+        <Text size="xl" view="secondary" as="p" lineHeight="m" align="center">
           Следите за обновлениями{' '}
-          <Text
-            as="a"
-            href={constaTelegram}
-            size="xl"
-            view="link"
-            target="_blank"
-          >
+          <Text as="a" href={constaTelegram} view="link" target="_blank">
             в Телеграм-канале
           </Text>
           .

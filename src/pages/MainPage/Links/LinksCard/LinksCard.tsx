@@ -59,6 +59,7 @@ export const LinksCard: React.FC<Props> = (props) => {
           ])}
           size="l"
           as="p"
+          lineHeight="m"
         >
           {description}
         </Text>
@@ -78,6 +79,7 @@ export const LinksCard: React.FC<Props> = (props) => {
             size="l"
             as="span"
             view="primary"
+            lineHeight="m"
           >
             Смотреть
           </Text>

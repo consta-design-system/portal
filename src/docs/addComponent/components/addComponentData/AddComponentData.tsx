@@ -13,7 +13,11 @@ export const AddComponentDataStage1 = () => {
     <div className={cnAddComponentData()}>
       <div>
         <Badge label="Этап 1" />
-        <Text weight="bold" className={cnAddComponentData('Text')}>
+        <Text
+          weight="bold"
+          className={cnAddComponentData('Text')}
+          lineHeight="m"
+        >
           Принимаем решение
         </Text>
       </div>
@@ -32,11 +36,11 @@ export const AddComponentDataStage1 = () => {
           есть ли в нём примеры использования и тесты.
         </li>
       </ol>
-      <Text size="s">
+      <Text size="s" lineHeight="m">
         После этого этапа становится понятно, что это за компонент и нужно ли
         его добавлять в дизайн-систему.
       </Text>
-      <Text size="s">
+      <Text size="s" lineHeight="m">
         Договариваемся, кто его разрабатывает — вы или команда Consta.
       </Text>
     </div>

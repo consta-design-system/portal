@@ -20,7 +20,7 @@ const CG = ['Выбери меня', 'Нет, меня'];
 
 const ButtonWithTooltip = withTooltip({
   content: (
-    <Text size="s" align="center">
+    <Text size="s" align="center" lineHeight="m">
       Это тултип, он всегда в цветовой теме, контрастной по отношению к основной
     </Text>
   ),
@@ -57,6 +57,7 @@ export const Example: React.FC = () => {
           as="h3"
           lineHeight="xs"
           className={cnExample('Title')}
+          view="primary"
         >
           Заголовок
         </Text>

@@ -27,6 +27,7 @@ export const Themes: React.FC = () => {
         className={cnThemes(null, ['decorator decorator_indent-b_4xl'])}
         size="2xl"
         view="secondary"
+        lineHeight="m"
         as="p"
       >
         С библиотекой Consta можно мгновенно поменять внешний вид проекта —

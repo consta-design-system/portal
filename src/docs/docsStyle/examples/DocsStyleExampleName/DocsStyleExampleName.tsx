@@ -59,10 +59,10 @@ export const TextExampleName3 = () => {
           description: (
             <>
               <br />
-              <Text weight="bold" size="s">
+              <Text weight="bold" size="s" lineHeight="m">
                 Это заголовок
               </Text>
-              <Text view="secondary" size="s">
+              <Text view="secondary" size="s" lineHeight="m">
                 Это карточка, в которой ничего нет, кроме текста. Здесь может
                 быть что угодно.
               </Text>
@@ -75,10 +75,10 @@ export const TextExampleName3 = () => {
           description: (
             <>
               <br />
-              <Text weight="bold" size="s">
+              <Text weight="bold" size="s" lineHeight="m">
                 Клонирование репозитория
               </Text>
-              <Text view="secondary" size="s">
+              <Text view="secondary" size="s" lineHeight="m">
                 Для клонирования репозитория нужно ввести команду git clone и
                 указать его адрес. Репозиторий клонируется в текущую выбранную
                 папку в консоли.
@@ -103,10 +103,10 @@ export const TextExampleName4 = () => {
           description: (
             <>
               <br />
-              <Text weight="bold" size="s">
+              <Text weight="bold" size="s" lineHeight="m">
                 Это самый настоящий коллапс
               </Text>
-              <Text view="secondary" size="s">
+              <Text view="secondary" size="s" lineHeight="m">
                 Здесь может быть что угодно. Например, этот текст. Но не
                 обязательно: вы можете добавить иконки, кнопки, картинки или
                 даже мини-игру (ну вдруг). Удивительная штука: никогда не
@@ -121,10 +121,10 @@ export const TextExampleName4 = () => {
           description: (
             <>
               <br />
-              <Text weight="bold" size="s">
+              <Text weight="bold" size="s" lineHeight="m">
                 Отсортировать коммиты по автору
               </Text>
-              <Text view="secondary" size="s">
+              <Text view="secondary" size="s" lineHeight="m">
                 Чтобы вывести список коммитов, отфильтрованных по автору,
                 следует воспользоваться следующей командой git log
               </Text>

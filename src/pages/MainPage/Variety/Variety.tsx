@@ -27,11 +27,11 @@ export const Variety: React.FC = () => {
       >
         Используйте готовые компоненты
       </Text>
-      <Text size="2xl" view="secondary" as="p">
+      <Text size="2xl" view="secondary" as="p" lineHeight="m">
         Основа, из которой легко построить интерфейс — для любых задач. Большой
         выбор, много вариантов, можно менять и дорабатывать. Посмотреть, как
         выглядят и работают компоненты дизайн-системы, можно в нашей{' '}
-        <Text size="2xl" view="link" as="a" href={libLink} target="_blank">
+        <Text view="link" as="a" href={libLink} target="_blank">
           библиотеке
         </Text>
         .

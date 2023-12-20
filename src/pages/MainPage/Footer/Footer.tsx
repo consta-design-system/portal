@@ -37,12 +37,12 @@ export const Footer: React.FC = () => {
               size="xl"
               view="secondary"
               as="p"
+              lineHeight="m"
             >
               Пишите нам в{' '}
               <Text
                 as="a"
                 href="https://t.me/Consta_Chat"
-                size="xl"
                 view="link"
                 target="_blank"
               >
@@ -59,6 +59,7 @@ export const Footer: React.FC = () => {
             target="_blank"
             size="m"
             view="link"
+            lineHeight="m"
           >
             Репозиторий этой страницы <IconOpenInNew size="s" />
           </Text>

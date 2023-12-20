@@ -34,7 +34,9 @@ const Accordion: React.FC<AccordionProps> = (props) => {
         onClick={() => setExpand(!isExpand)}
         aria-hidden="true"
       >
-        <Text size="2xl">{title}</Text>
+        <Text size="2xl" lineHeight="m">
+          {title}
+        </Text>
         <IconAdd size="m" view="secondary" className={cnFAQ('CollapseIcon')} />
       </div>
       <div className={cnFAQ('Answer')}>{children}</div>

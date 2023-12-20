@@ -20,8 +20,8 @@ export const WhyReason: React.FC<WhyReasonProps> = (props) => {
   return (
     <div className={cnWhyReason()}>
       <Picture {...picture} className={cnWhyReason('Image')} />
-      <Text size="2xl" as="p" view="secondary">
-        <Text size="2xl" as="span" weight="bold">
+      <Text size="2xl" as="p" view="secondary" lineHeight="m">
+        <Text as="span" weight="bold" view="primary">
           {lead}
         </Text>
         {text}

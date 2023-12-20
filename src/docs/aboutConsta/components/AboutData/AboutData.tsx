@@ -24,7 +24,7 @@ export const AboutDataGeneral = () => {
         }
       >
         <div>
-          <Text weight="bold" size="l">
+          <Text weight="bold" size="l" lineHeight="m">
             Основное
           </Text>
         </div>
@@ -79,7 +79,13 @@ export const AboutDataGeneral = () => {
             </Link>
           </li>
           <li>
-            <Text className={cnAboutData('Link')} as="a" view="link" href="/">
+            <Text
+              className={cnAboutData('Link')}
+              as="a"
+              view="link"
+              href="/"
+              lineHeight="m"
+            >
               все компоненты
             </Text>
           </li>
@@ -87,7 +93,7 @@ export const AboutDataGeneral = () => {
       </div>
       <div className={wp.tplGrid('fraction', { row: 'first' })}>
         <div>
-          <Text weight="bold" size="l">
+          <Text weight="bold" size="l" lineHeight="m">
             С чего начать
           </Text>
         </div>
@@ -111,6 +117,7 @@ export const AboutDataGeneral = () => {
               view="link"
               href="https://www.figma.com/@consta"
               target="_blank"
+              lineHeight="m"
             >
               библиотеки в Figma
             </Text>
@@ -122,6 +129,7 @@ export const AboutDataGeneral = () => {
               view="link"
               href="https://github.com/consta-design-system"
               target="_blank"
+              lineHeight="m"
             >
               библиотеки на GitHub
             </Text>
@@ -147,7 +155,7 @@ export const AboutDataGeneral = () => {
         }
       >
         <div>
-          <Text weight="bold" size="l">
+          <Text weight="bold" size="l" lineHeight="m">
             Обновления и контакты
           </Text>
         </div>
@@ -159,6 +167,7 @@ export const AboutDataGeneral = () => {
               view="link"
               href="https://consta.design/"
               target="_blank"
+              lineHeight="m"
             >
               сайт дизайн-системы
             </Text>
@@ -170,6 +179,7 @@ export const AboutDataGeneral = () => {
               view="link"
               href="https://t.me/consta_ui_releases"
               target="_blank"
+              lineHeight="m"
             >
               канал с обновлениями
             </Text>
@@ -181,6 +191,7 @@ export const AboutDataGeneral = () => {
               view="link"
               href="https://t.me/Consta_Chat"
               target="_blank"
+              lineHeight="m"
             >
               чат
             </Text>
@@ -189,7 +200,7 @@ export const AboutDataGeneral = () => {
       </div>
       <div className={wp.tplGrid('fraction', { row: 'first' })}>
         <div>
-          <Text weight="bold" size="l">
+          <Text weight="bold" size="l" lineHeight="m">
             Контрибьюторам
           </Text>
         </div>

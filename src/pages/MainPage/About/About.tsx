@@ -30,6 +30,7 @@ const More = (
       'decorator decorator_distribute_left decorator_vertical-align_center decorator_indent-r_s',
     ])}
     size="l"
+    lineHeight="m"
     as="span"
   >
     Смотреть
@@ -69,6 +70,7 @@ export const About: React.FC = () => {
             size="2xl"
             view="secondary"
             as="p"
+            lineHeight="m"
           >
             Это библиотеки компонентов и понятные правила их взаимодействия —
             всё, что нужно дизайнерам и разработчикам для создания интерфейсов.
@@ -139,7 +141,12 @@ export const About: React.FC = () => {
                   >
                     {item.title}
                   </Text>
-                  <Text className={cnLinks('Text')} size="l" as="p">
+                  <Text
+                    className={cnLinks('Text')}
+                    size="l"
+                    as="p"
+                    lineHeight="m"
+                  >
                     {item.subTitle}
                   </Text>
                 </div>
@@ -186,10 +193,10 @@ export const About: React.FC = () => {
           className="decorator decorator_indent-r_m"
           style={{ flexShrink: 0 }}
         />
-        <Text size="l" view="secondary" as="p">
+        <Text size="l" view="secondary" as="p" lineHeight="m">
           Дизайн-систему можно использовать бесплатно, она распространяется на
           условиях открытой{' '}
-          <Text href={licenceMit} target="_blank" size="l" view="link" as="a">
+          <Text href={licenceMit} target="_blank" view="link" as="a">
             лицензии MIT
           </Text>
           .

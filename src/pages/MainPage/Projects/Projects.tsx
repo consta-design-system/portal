@@ -34,6 +34,7 @@ export const Projects: React.FC = () => {
           size="2xl"
           as="p"
           align="center"
+          lineHeight="m"
         >
           Больше 120 проектов компании создаётся с помощью Consta. С каждым днём
           их становится всё больше. Хотите посмотреть?

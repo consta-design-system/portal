@@ -16,22 +16,33 @@ export const questions = [
     title: 'Для каких задач подходит дизайн-система?',
     answer: () => (
       <>
-        <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+        <Text
+          as="p"
+          size="xl"
+          lineHeight="m"
+          className="decorator decorator_indent-b_m"
+        >
           Для разработки пользовательских интерфейсов цифровых продуктов.
         </Text>
-        <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+        <Text
+          as="p"
+          size="xl"
+          lineHeight="m"
+          className="decorator decorator_indent-b_m"
+        >
           Это может быть интранет, личный кабинет, инструмент для мониторинга
           какой-либо системы, управления оборудованием, совместной работы или
           что-то ещё.
         </Text>
-        <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+        <Text
+          as="p"
+          size="xl"
+          lineHeight="m"
+          className="decorator decorator_indent-b_m"
+        >
           Это может быть продукт, который открывают на ноутбуке, офисном
           компьютере или видео-стене.
         </Text>
-        {/* <Text as="p" size="xl">
-          Дизайн-система разрабатывается для продуктов «Газпром нефти», но на самом деле она
-          универсальная: использовать может кто угодно.
-        </Text> */}
       </>
     ),
   },
@@ -39,34 +50,39 @@ export const questions = [
     title: 'Какие технологии использует дизайн-система?',
     answer: () => (
       <>
-        <Text as="p" size="xl" weight="bold">
+        <Text as="p" size="xl" lineHeight="m" weight="bold">
           Для разработки
         </Text>
-        <Text as="p" size="xl">
-          <Text as="span" size="xl" weight="bold">
+        <Text as="p" size="xl" lineHeight="m">
+          <Text as="span" weight="bold">
             React
           </Text>{' '}
           — JavaScript-библиотека для создания пользовательских интерфейсов
         </Text>
-        <Text as="p" size="xl">
-          <Text as="span" size="xl" weight="bold">
+        <Text as="p" size="xl" lineHeight="m">
+          <Text as="span" weight="bold">
             TypeScript
           </Text>{' '}
           — язык программирования для разработки веб-приложений, расширяющий
           возможности JavaScript
         </Text>
-        <Text as="p" size="xl" className="decorator decorator_indent-b_m">
-          <Text as="span" size="xl" weight="bold">
+        <Text
+          as="p"
+          size="xl"
+          lineHeight="m"
+          className="decorator decorator_indent-b_m"
+        >
+          <Text as="span" weight="bold">
             PostCSS
           </Text>{' '}
           — автоматизирует рутинные операции в CSS с помощью расширений,
           написанных на JavaScript
         </Text>
-        <Text as="p" size="xl" weight="bold">
+        <Text as="p" size="xl" lineHeight="m" weight="bold">
           Для дизайна
         </Text>
-        <Text as="p" size="xl">
-          <Text as="span" size="xl" weight="bold">
+        <Text as="p" size="xl" lineHeight="m">
+          <Text as="span" weight="bold">
             Figma
           </Text>{' '}
           — инструмент для разработки интерфейсов и прототипирования
@@ -77,7 +93,7 @@ export const questions = [
   {
     title: 'Это только для новых продуктов?',
     answer: () => (
-      <Text as="p" size="xl">
+      <Text as="p" size="xl" lineHeight="m">
         Не обязательно. Если ваш продукт уже работает, можно постепенно
         перевести его на дизайн-систему. Сначала потребуются дополнительные
         усилия, но потом будет проще поддерживать и соблюдать консистентность.
@@ -89,15 +105,25 @@ export const questions = [
       'Можем ли мы использовать Consta, если у нас готовый продукт «из коробки»?',
     answer: () => (
       <>
-        <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+        <Text
+          as="p"
+          size="xl"
+          lineHeight="m"
+          className="decorator decorator_indent-b_m"
+        >
           Это зависит от вашего проекта и от решения, которое вы используете.
           Есть два варианта: создать свой веб-интерфейс для коробочного продукта
           или настроить то, как он выглядит
         </Text>
-        <Text as="p" size="xl" weight="bold">
+        <Text as="p" size="xl" lineHeight="m" weight="bold">
           Создать свой веб-интерфейс
         </Text>
-        <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+        <Text
+          as="p"
+          size="xl"
+          lineHeight="m"
+          className="decorator decorator_indent-b_m"
+        >
           Для некоторых готовых решений можно создать свой веб-интерфейс на
           дизайн-системе Consta (например, у 1С, Bitrix и QlikSense есть API,
           который это позволяет). Это большая задача, её стоит планировать, если
@@ -105,10 +131,10 @@ export const questions = [
           пользовательского опыта и удобный интерфейс. Например, если это
           дашборд или личный кабинет сотрудника в большой компании.
         </Text>
-        <Text as="p" size="xl" weight="bold">
+        <Text as="p" size="xl" lineHeight="m" weight="bold">
           Настроить внешний вид
         </Text>
-        <Text as="p" size="xl">
+        <Text as="p" size="xl" lineHeight="m">
           У других готовых решений настраивается интерфейс (например, у QlikView
           и Terrasoft). В этом случае дизайн-систему не получится использовать
           полностью, но на неё можно опираться при выборе шрифтов, цветов, формы
@@ -128,51 +154,54 @@ export const questions = [
 
       return (
         <>
-          <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+          <Text
+            as="p"
+            size="xl"
+            lineHeight="m"
+            className="decorator decorator_indent-b_m"
+          >
             Это зависит от ваших задач и технологий. Есть несколько вариантов.
           </Text>
-          <Text as="p" size="xl" weight="bold">
+          <Text as="p" size="xl" lineHeight="m" weight="bold">
             Посмотреть и сделать так же
           </Text>
-          <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+          <Text
+            as="p"
+            size="xl"
+            lineHeight="m"
+            className="decorator decorator_indent-b_m"
+          >
             Eсли по каким-то причинам наши наработки вы использовать не можете.
             Например, разрабатываете мобильное приложение. В этом случае
             дизайн-систему можно использовать как гайдлайн.
           </Text>
-          <Text as="p" size="xl" weight="bold">
+          <Text as="p" size="xl" lineHeight="m" weight="bold">
             Использовать все возможности
           </Text>
-          <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+          <Text
+            as="p"
+            size="xl"
+            lineHeight="m"
+            className="decorator decorator_indent-b_m"
+          >
             Если вы запускаете веб-проект и готовы вести разработку на React,
             разработчики могут{' '}
-            <Text as="a" view="link" href={libLink} target="_blank" size="xl">
+            <Text as="a" view="link" href={libLink} target="_blank">
               подключить нашу библиотеку
             </Text>{' '}
             с элементами интерфейса. Если нет, дизайнеры могут собрать макет
             интерфейса на основе{' '}
-            <Text
-              as="a"
-              view="link"
-              href={constaFigma}
-              target="_blank"
-              size="xl"
-            >
+            <Text as="a" view="link" href={constaFigma} target="_blank">
               шаблонов в Figma
             </Text>
             .
           </Text>
-          <Text as="p" size="xl" weight="bold">
+          <Text as="p" size="xl" lineHeight="m" weight="bold">
             Дополнять и дорабатывать
           </Text>
-          <Text as="p" size="xl">
+          <Text as="p" size="xl" lineHeight="m">
             Всё в открытом доступе. Вы можете посмотреть{' '}
-            <Text
-              as="a"
-              view="link"
-              href={constaGitHub}
-              target="_blank"
-              size="xl"
-            >
+            <Text as="a" view="link" href={constaGitHub} target="_blank">
               исходный код нашей библиотеки на GitHub
             </Text>{' '}
             и предложить изменения.
@@ -190,9 +219,9 @@ export const questions = [
       });
 
       return (
-        <Text as="p" size="xl">
+        <Text as="p" size="xl" lineHeight="m">
           Отлично, отправьте им ссылку на{' '}
-          <Text as="a" view="link" href={libLink} target="_blank" size="xl">
+          <Text as="a" view="link" href={libLink} target="_blank">
             описание дизайн-системы
           </Text>
           . Все ресурсы публичные, можно использовать и «внутри» компании, и
@@ -205,7 +234,12 @@ export const questions = [
     title: 'На каких условиях можно использовать дизайн-систему?',
     answer: () => (
       <>
-        <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+        <Text
+          as="p"
+          size="xl"
+          lineHeight="m"
+          className="decorator decorator_indent-b_m"
+        >
           Дизайн-система распространяется бесплатно, на условиях открытой
           лицензии MIT.{' '}
         </Text>
@@ -216,6 +250,7 @@ export const questions = [
           target="_blank"
           size="xl"
           display="block"
+          lineHeight="m"
         >
           Посмотреть все условия
         </Text>
@@ -233,7 +268,12 @@ export const questions = [
 
       return (
         <>
-          <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+          <Text
+            as="p"
+            size="xl"
+            lineHeight="m"
+            className="decorator decorator_indent-b_m"
+          >
             Очень просто: дизайн-система в публичном репозитории на GitHub, вы
             можете прислать заявку на изменения или даже сделать доработку.
           </Text>
@@ -243,6 +283,7 @@ export const questions = [
             href={link}
             target="_blank"
             size="xl"
+            lineHeight="m"
             display="block"
           >
             Как это сделать
@@ -254,7 +295,12 @@ export const questions = [
   {
     title: 'В какой момент её лучше подключать?',
     answer: () => (
-      <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+      <Text
+        as="p"
+        size="xl"
+        lineHeight="m"
+        className="decorator decorator_indent-b_m"
+      >
         — Когда понятно, что примерно будет в вашем продукте, но еще не ясно,
         как именно вы будете его делать
         <br />— Когда будете выбирать, какие технологии использовать для
@@ -269,10 +315,20 @@ export const questions = [
     title: 'Как проходит разработка интерфейса с дизайн-системой?',
     answer: () => (
       <>
-        <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+        <Text
+          as="p"
+          size="xl"
+          lineHeight="m"
+          className="decorator decorator_indent-b_m"
+        >
           Это зависит от вашего процесса разработки. Вот один из вариантов:
         </Text>
-        <Text as="ol" size="xl" className="decorator decorator_indent-b_m">
+        <Text
+          as="ol"
+          size="xl"
+          lineHeight="m"
+          className="decorator decorator_indent-b_m"
+        >
           <li>Менеджер или заказчик ставит задачу на создание продукта</li>
           <li>
             Дизайнеры создают макет — из компонентов дизайн-системы, на основе
@@ -281,7 +337,7 @@ export const questions = [
           <li>
             Разработчики собирают интерфейс на основе макета — берут компоненты
             из npm пакета{' '}
-            <Text as="a" view="link" href={constaNPM} target="_blank" size="xl">
+            <Text as="a" view="link" href={constaNPM} target="_blank">
               @consta/uikit
             </Text>
             , встраивают в свой проект, оживляют с помощью скриптов и подключают
@@ -292,7 +348,7 @@ export const questions = [
             и других элементов из дизайн-системы проверять не нужно).
           </li>
         </Text>
-        <Text as="p" size="xl">
+        <Text as="p" size="xl" lineHeight="m">
           Готово, можно показывать продукт пользователям.
         </Text>
       </>
@@ -301,15 +357,14 @@ export const questions = [
   {
     title: 'Где найти специалистов для работы над проектом?',
     answer: () => (
-      <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+      <Text
+        as="p"
+        size="xl"
+        lineHeight="m"
+        className="decorator decorator_indent-b_m"
+      >
         Вы можете найти любых специалистов и даже всю команду на{' '}
-        <Text
-          as="a"
-          view="link"
-          href={platfortmProfessionals}
-          target="_blank"
-          size="xl"
-        >
+        <Text as="a" view="link" href={platfortmProfessionals} target="_blank">
           платформе Профессионалы 4.0
         </Text>
         . Разместите описание вашего проекта или задачи и ждите откликов. После
