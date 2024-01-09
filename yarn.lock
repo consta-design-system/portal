@@ -1489,24 +1489,11 @@
   dependencies:
     chalk "^4.1.0"
 
-"@consta/header@^3.0.0-beta.2":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@consta/header/-/header-3.0.0.tgz#b4a10653492b84107a82f1a5a28d9d0641bf4aac"
-  integrity sha512-NSAY2Lzu3MtKMunEcnMCJPVhaEPz9PIkOmu32uotN3jsgDEJbNK67KUhElx6DuN1c0ocV9aH1kVa8eLXH8XAqA==
-
-"@consta/icons@^1.0.0-beta.1 ":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@consta/icons/-/icons-1.0.1.tgz#59f51cc421de0ff14ed4308026685e82240d3473"
-  integrity sha512-TgN03C5KOzK8eBOx9Kl4GFw1SL+qSILoadWMboXwOiSHuPU7p4ie5z4ZmS7TzUnLOhybZBL3xVsM9UBOpDMKKQ==
-
-"@consta/stand@^0.0.135":
-  version "0.0.135"
-  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.135.tgz#7997e3734df221fec289e7862eb4462e59cc0d1a"
-  integrity sha512-djjdTDpoztswtSwOJl7NnD6tVzKvPoMJwAR70OaeOrWgqXdHpZ5VTZEQ/N9+H/r5gIW5rTzZbcOSSoTgl4GwvA==
+"@consta/stand@^0.0.136":
+  version "0.0.136"
+  resolved "https://registry.yarnpkg.com/@consta/stand/-/stand-0.0.136.tgz#4429b369bb6ebda5e5ee89debafc479baaa77239"
+  integrity sha512-e8K4362ficNtleYQ5QOBg+IKyx1cPbm0rcfKXb+vccFWJqdiraqwcJ3YzxFFlFZ1nf0pntEDOjkap2FfSraVkg==
   dependencies:
-    "@consta/header" "^3.0.0-beta.2"
-    "@consta/icons" "^1.0.0-beta.1 "
-    "@consta/uikit" "^5.0.0-beta.2"
     "@mdx-js/loader" "^2.3.0"
     "@mdx-js/react" "^2.3.0"
     "@oclif/command" "^1.8.22"
@@ -1572,11 +1559,6 @@
     webpack-dev-server "^4.13.1"
     webpack-manifest-plugin "^5.0.0"
     workbox-webpack-plugin "^6.4.1"
-
-"@consta/uikit@^5.0.0-beta.2":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-5.0.0.tgz#cdd49a74369fc342cabe2f4d766d3a84bb27cc2d"
-  integrity sha512-gstxtzJY0suLNTSNFA5nt7qHQV42rNlhm2/CTpOBZdmmBAAG2ZPkmFyAWKrxQVLdHxkbERG5czcKkWZpS07z4g==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
