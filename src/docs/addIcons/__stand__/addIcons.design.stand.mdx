@@ -7,7 +7,7 @@ import Icon5 from './images/Icon5.image.svg';
 import Icon6 from './images/Icon6.image.svg';
 import Export from './images/Export.image.png';
 
-Это инструкция по добавлению новых иконок в библиотеки в Figma и в код. Если вы хотите узнать про автоматическую генерацию компонентов из SVG, загляните в [эту инструкцию](##LIBS.LIB.STAND.TAB/lib:portal/stand:contributers-addicons/tab:dev)
+Это инструкция по добавлению новых иконок в библиотеку Consta icons. Если вы хотите узнать про автоматическую генерацию компонентов из SVG, загляните в [эту инструкцию](##LIBS.LIB.STAND.TAB/lib:portal/stand:contributers-addicons/tab:dev)
 
 <MdxMenu>
 
@@ -18,7 +18,7 @@ import Export from './images/Export.image.png';
 - [Принципы работы с библиотекой](#принципы-работы-с-библиотекой)
 - [Добавление в библиотеку в коде](#добавление-в-библиотеку-в-коде)
   - [Подготовка SVG](#подготовка-SVG)
-  - [Работа с Git](#работа-с-git)
+  - [Добавление изменений в репозиторий Consta](#добавление-изменений-в-репозиторий-consta)
   - [Создание Pull request](#создание-pull-request)
 
 </MdxMenu>
@@ -98,15 +98,40 @@ import Export from './images/Export.image.png';
 </svg>
 ```
 
-### Работа с Git
+### Добавление изменений в репозиторий Consta
 
-1. Клонируйте [репозиторий @consta/uikit](https://github.com/consta-design-system/uikit) на GitHub.
-2. Создайте новую ветку.
+1. Клонируйте [репозиторий @consta/uikit](https://github.com/consta-design-system/uikit) на GitHub:
+
+```bash
+git clone https://github.com/consta-design-system/uikit.git
+```
+
+2. Создайте новую ветку:
+
+```bash
+git checkout -b feat/new_icons
+```
+
 3. Перейдите в папку с клонированным репозиторием.
 4. Создайте папку с названием новой иконки в папке `/uikit/src/icons/` и переместите в нее экспортированные SVG.
-5. В консоли в корне проекта выполните команду `yarn pre-build`.
-6. Сделайте коммит изменений.
-7. Отправьте изменения в репозиторий @consta/uikit.
+5. В консоли в корне проекта выполните команду:
+
+```bash
+yarn pre-build
+```
+
+6. Сделайте коммит изменений:
+
+```bash
+git add .
+git commit -m "<описание_коммита>"
+```
+
+7. Отправьте изменения в репозиторий @consta/uikit:
+
+```bash
+git push
+```
 
 ### Создание Pull request
 
