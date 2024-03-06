@@ -92,8 +92,35 @@ import Export from './images/Export.image.png';
 
 Пример кода готовой иконки:
 
+```tsx
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M13 8L3 14L3 2L13 8Z" />
+</svg>
 ```
-<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+
+Вы можете задать свойства для рендера иконки::
+
+| Свойство       | Тип                | По умолчанию | Описание                                        |
+| -------------- | ------------------ | ------------ | ----------------------------------------------- |
+| `color?`       | `mono`, `multiple` | `mono`       | Цветность иконки                                |
+| `group?`       | -                  | -            | Группа иконки на стенде                         |
+| `withoutSvgo?` | `boolean`          | -            | Выключить [`svgo`](https://github.com/svg/svgo) |
+
+Например, так будет выглядеть код со свойствами `color?` и `group?`:
+
+```tsx
+<!-- ##color:mono ##group:communication -->
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+>
   <path d="M13 8L3 14L3 2L13 8Z" />
 </svg>
 ```
