@@ -52,38 +52,38 @@ export const IconAdd = createIcon({
 Если вы настроили сборку так, что иконки из SVG собираются в компоненты, добавьте в конфигурацию `createIcon`.
 Пример webpack со сборкой иконок через SVGR:
 
-```jsx
+```json
 {
-   test: /\.svg$/,
-   use: [
-       {
-           loader: '@svgr/webpack',
-           options: {
-               template: (
-                   { template },
-                   opts,
-                   { imports, componentName, props, jsx, exports },
-               ) => {
-                   return template.ast`
-                       ${imports}
-                       import { createIcon } from '@consta/uikit/createIcon';
+  test: /\.icon\.svg$/,
+  use: [
+    {
+      loader: '@svgr/webpack',
+      options: {
+        template: (
+          { imports, componentName, props, jsx, exports },
+          { tpl },
+        ) => {
+          return tpl`
+                      ${imports}
+                      import { createIcon } from '@consta/icons/Icon';
+                      const Icon = (${props}) => {
+                        props = { ...props };
+                        return ${jsx};
 
-                       const SvgComponent = (${props}) => {
-                         return ${jsx};
-                       };
-
-                       const ${componentName} = createIcon({
-                         m: SvgComponent,
-                         s: SvgComponent,
-                         xs: SvgComponent,
-                         name: '${componentName}',
-                       });
-
-                       export default ${componentName};
-                 `;
-               },
-           },
-       },
-   ],
+                      export default createIcon({
+                        xs: Icon,
+                        s: Icon,
+                        m: Icon,
+                        l: Icon,
+                        name: '${componentName}',
+                      });
+                    `;
+        },
+        plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
+        dimensions: false,
+        svgo: true,
+      },
+    },
+  ],
 },
 ```
