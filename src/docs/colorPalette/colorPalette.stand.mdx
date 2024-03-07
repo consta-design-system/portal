@@ -97,7 +97,11 @@ import { MdxMenu } from '@consta/stand';
 1. Выберите тему, которую нужно кастомизировать: [светлую](https://www.figma.com/community/file/855572288089401017/consta-default-colors), [темную](https://www.figma.com/community/file/855572445137814202/consta-dark-colors) или [акцентную](https://www.figma.com/community/file/855572769860808379/consta-display-colors)..
 2. Создайте копию файла библиотеки в Figma.
 3. Определите базовые цвета.
-   > Составные цвета в макете Figma не будут изменены автоматически. Чтобы посмотреть составные цвета, воспользуйтесь [конструктором тем](##THEME_CONSTRUCTOR).
+   <div>
+     {' '}
+     > Составные цвета в макете Figma не будут изменены автоматически. Чтобы посмотреть
+     составные цвета, воспользуйтесь [конструктором тем](##THEME_CONSTRUCTOR).
+   </div>
 4. Отредактируйте стиль каждого цветового значения в соответствии с рассчитанными в конструкторе значениями.
 5. Напишите коды базовых цветов разработчику или самостоятельно пропишите их в соответствующий CSS-файл.
 6. Значения дополнительных цветов внутри CSS-класса рассчитаются с помощью [postcss-color-function](https://github.com/postcss/postcss-color-function) и [postcss-simple-vars](https://github.com/postcss/postcss-simple-vars).
