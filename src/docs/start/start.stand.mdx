@@ -1,10 +1,16 @@
-#### Установите пакет
+1. Установите пакет:
 
-`yarn add @consta/uikit` или `npm install @consta/uikit`
+```bash
+yarn add @consta/uikit
+```
 
-#### Подключите тему
+или
 
-Тему обязательно нужно подключать в корне приложения, так, чтобы все компоненты `@consta/uikit` были вложены в компонент [Theme](##LIBS.LIB.STAND/lib:uikit/stand:components-theme-stable).
+```bash
+npm install @consta/uikit
+```
+
+2. Подключите [тему](##LIBS.LIB.STAND/lib:uikit/stand:components-theme-stable):
 
 ```tsx
 import React from 'react';
@@ -17,5 +23,3 @@ const App = () => (
   </Theme>
 );
 ```
-
-#### Всë!
