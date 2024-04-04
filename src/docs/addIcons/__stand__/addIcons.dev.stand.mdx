@@ -1,23 +1,19 @@
-> Это инструкция по созданию и автоматической генерации иконок из SVG. Если вам нужно добавить иконку в Figma, загляните в [эту инструкцию](##LIBS.LIB.STAND.TAB/lib:portal/stand:contributers-addicons/tab:design)
+import { MdxMenu } from '@consta/stand';
+
+Это инструкция по созданию и автоматической генерации иконок из SVG. Чтобы узнать, как добавить иконку в Figma, загляните в [эту инструкцию](##LIBS.LIB.STAND.TAB/lib:portal/stand:contributers-addicons/tab:design)
+
+<MdxMenu>
 
 - [Как создать иконку](#как-создать-иконку)
-- [Если есть только один размер иконки](#если-есть-только-один-размер-иконки)
-- [Если иконки автоматически собираются из SVG в компоненты](#если-иконки-автоматически-собираются-из-SVG-в-компоненты)
+- [Есть только один размер иконки](#если-есть-только-один-размер-иконки)
+- [Иконки автоматически собираются из SVG в компоненты](#если-иконки-автоматически-собираются-из-SVG-в-компоненты)
+
+</MdxMenu>
 
 ## Как создать иконку
 
-### 1. Подготовьте SVG
-
-Удалите из SVG атрибуты `fill`, `fillOpacity`, `width`, `height`.
-
-> Наличие этих атрибутов, в случае изменения размера компонента или темы, не позволит иконкам меняться
-
-### 2. Создайте иконки
-
-Компоненты дизайн-системы Consta принимают иконки определенного типа.
-Чтобы ваши иконки соответствовали этому типу,
-используйте функцию `createIcon` —
-в неё нужно передать пути к файлам с иконоками в формате SVG.
+1. Удалите из SVG атрибуты `fill`, `fillOpacity`, `width`, `height`. Это необходимо для адаптации иконки к размеру компонента или теме.
+2. Используйте функцию `createIcon`: передайте в нее пути к файлам с иконоками в формате SVG. Это важный шаг, так как компоненты Consta принимают иконки определенного типа.
 
 ```tsx
 import { createIcon } from '@consta/uikit/createIcon';
@@ -34,10 +30,9 @@ export const IconAdd = createIcon({
 });
 ```
 
-## Если есть только один размер иконки
+## Есть только один размер иконки
 
-Если у вас нет разных иконок под каждый размер, ничего страшного.
-Просто укажите одну иконку во всех размерах:
+Если у вас нет разных иконок под каждый размер, укажите одну иконку во всех размерах:
 
 ```tsx
 import { createIcon } from '@consta/uikit/createIcon';
@@ -52,45 +47,43 @@ export const IconAdd = createIcon({
 });
 ```
 
-## Если иконки автоматически собираются из SVG в компоненты
+## Иконки автоматически собираются из SVG в компоненты
 
-Если ваша сборка уже настроена так, что иконки из SVG собираются в компоненты,
-вы можете добавить в конфигурацию `createIcon`.
-
+Если вы настроили сборку так, что иконки из SVG собираются в компоненты, добавьте в конфигурацию `createIcon`.
 Пример webpack со сборкой иконок через SVGR:
 
-```jsx
+```json
 {
-   test: /\.svg$/,
-   use: [
-       {
-           loader: '@svgr/webpack',
-           options: {
-               template: (
-                   { template },
-                   opts,
-                   { imports, componentName, props, jsx, exports },
-               ) => {
-                   return template.ast`
-                       ${imports}
-                       import { createIcon } from '@consta/uikit/createIcon';
+  test: /\.icon\.svg$/,
+  use: [
+    {
+      loader: '@svgr/webpack',
+      options: {
+        template: (
+          { imports, componentName, props, jsx, exports },
+          { tpl },
+        ) => {
+          return tpl`
+                      ${imports}
+                      import { createIcon } from '@consta/icons/Icon';
+                      const Icon = (${props}) => {
+                        props = { ...props };
+                        return ${jsx};
 
-                       const SvgComponent = (${props}) => {
-                         return ${jsx};
-                       };
-
-                       const ${componentName} = createIcon({
-                         m: SvgComponent,
-                         s: SvgComponent,
-                         xs: SvgComponent,
-                         name: '${componentName}',
-                       });
-
-                       export default ${componentName};
-                 `;
-               },
-           },
-       },
-   ],
+                      export default createIcon({
+                        xs: Icon,
+                        s: Icon,
+                        m: Icon,
+                        l: Icon,
+                        name: '${componentName}',
+                      });
+                    `;
+        },
+        plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
+        dimensions: false,
+        svgo: true,
+      },
+    },
+  ],
 },
 ```
