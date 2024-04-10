@@ -1,0 +1,79 @@
+import { MdxTabs } from '@consta/stand';
+
+## Установка Consta
+
+<MdxTabs labels = {['npm', 'yarn']} view = "clear">
+<>
+1. Установите [Node.js](https://nodejs.org/en).
+2. Создайте новый проект:
+
+```cli
+npx create-react-app my-app
+```
+
+3. Перейдите в директорию проекта:
+
+```cli
+cd my-app
+```
+
+4. Установите пакет Consta:
+
+```cli
+npm install @consta/uikit
+```
+
+Полный список доступных библиотек смотрите [здесь](https://github.com/orgs/consta-design-system/repositories?type=all).
+
+</>
+
+<>
+1. Установите [Node.js](https://nodejs.org/en).
+2. Установите пакетный менеджер Yarn:
+
+```cli
+npm install -g yarn
+```
+
+3. Создайте новый проект:
+
+```cli
+yarn create react-app my-app
+```
+
+4. Перейдите в директорию проекта:
+
+```cli
+ cd my-app
+```
+
+5. Установите Consta:
+
+```cli
+yarn add @consta/uikit
+```
+
+Полный список доступных библиотек смотрите [здесь](https://github.com/orgs/consta-design-system/repositories?type=all).
+
+</>
+</MdxTabs>
+
+## Импорт компонентов
+
+1. Импортируйте в корневой файл библиотеку React, компонент [Theme](##LIBS.LIB.STAND.TAB/lib:uikit/stand:components-theme-stable/tab:dev), [пресет](##LIBS.LIB.STAND.TAB/lib:uikit/stand:components-theme-stable/tab:dev/hash:пресеты) и необходимые компоненты:
+
+```jsx
+import React from 'react';
+import { Theme, presetGpnDefault } from '@consta/uikit/Theme';
+import { Button } from '@consta/uikit/$компонент';
+```
+
+2. Вложите компоненты в тему:
+
+```jsx
+const App = () => (
+  <Theme preset={presetGpnDefault}>
+    <Button label="Кнопка" />
+  </Theme>
+);
+```
