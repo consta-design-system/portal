@@ -24,6 +24,7 @@ const repos = [
   'icons',
   'theme-constructor',
   'react-slick-adapter',
+  'themes',
 ];
 
 const clone = async (repoName) => {

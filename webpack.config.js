@@ -30,6 +30,7 @@ const repos = [
   'icons',
   'react-slick-adapter',
   'theme-constructor',
+  'themes',
 ];
 
 const repositoriesTsRules = (repos) => {
