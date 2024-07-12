@@ -31,7 +31,6 @@ module.exports = {
     'import',
     'jsx-a11y',
     'react-hooks',
-    '@typescript-eslint',
     'simple-import-sort',
     'prettier',
   ],
