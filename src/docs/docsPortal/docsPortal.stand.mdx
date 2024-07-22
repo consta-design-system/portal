@@ -25,7 +25,6 @@ import { MdxMenu } from '@consta/stand';
 ## Портал
 
 - [Адрес портала](##HOME)
-- [Репозиторий](https://github.com/consta-design-system/portal)
 
 Портал — это рамка для всех библиотек.
 
@@ -49,17 +48,13 @@ import { MdxMenu } from '@consta/stand';
 
 ##### Шаг 2. Добавьте репозиторий библиотеки
 
-Добавьте репозиторий и ветку, из которой нужно взять данные для библиотеки, в список [clone-repositories.sh](https://github.com/consta-design-system/portal/blob/master/clone-repositories.sh)
-
 Например, так:
 
 ```tsx
-git clone -b master https://${REPO_ACCESS_TOKEN}@github.com/consta-design-system/uikit.git ./repositories/uikit`
+
 ```
 
 ##### Шаг 3. Добавьте алиас библиотеки
-
-Добавьте алиас библиотеки в [webpack.config.js](https://github.com/consta-design-system/portal/blob/master/webpack.config.js) в объект `repos`:
 
 ```tsx
 const repos = [
@@ -170,7 +165,6 @@ export const { createStand } = createConfig({
   image, // изображение на главной странице библиотеки
   description, // описание на главной странице библиотеки
   standPageDecoration, // темы
-  repositoryUrl: 'https://github.com/consta-design-system/uikit', // репозиторий библиотеки на GitHub
   order: 1, // порядок в группе на портале
 });
 ```
