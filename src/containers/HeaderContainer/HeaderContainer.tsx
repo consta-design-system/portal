@@ -8,16 +8,9 @@ import React, { useEffect, useRef } from 'react';
 
 import { HeaderFlexible } from '##/components/HeaderFlexible/HeaderFlexible';
 import IconComponent from '##/icons/Component.icon.svg';
-import IconFigma from '##/icons/FigmaSmall.icon.svg';
-import IconGithub from '##/icons/GithubSmall.icon.svg';
 import IconTelegram from '##/icons/TelegramSmall.icon.svg';
 import ConstaLogo from '##/images/ConstaLogo2.image.svg';
-import {
-  constaGitHub,
-  constaTelegram,
-  contsaCommunityFigma,
-  gazPromNeft,
-} from '##/modules/api/links';
+import { constaTelegram, gazPromNeft } from '##/modules/api/links';
 import { fixedAtom } from '##/modules/header';
 import { cn } from '##/utils/bem';
 
@@ -62,18 +55,6 @@ export const HeaderContainer: React.FC = () => {
           link: componentsLink,
           onClick: componentsOnClick,
           icon: IconComponent,
-          onlyIcon: false,
-        },
-        {
-          label: 'Figma',
-          link: contsaCommunityFigma,
-          icon: IconFigma,
-          onlyIcon: false,
-        },
-        {
-          label: 'GitHub',
-          link: constaGitHub,
-          icon: IconGithub,
           onlyIcon: false,
         },
         {

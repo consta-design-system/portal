@@ -4,8 +4,6 @@ import { Text } from '@consta/uikit/Text';
 import React from 'react';
 
 import {
-  constaFigma,
-  constaGitHub,
   constaNPM,
   licenceMit,
   platfortmProfessionals,
@@ -78,15 +76,6 @@ export const questions = [
           — автоматизирует рутинные операции в CSS с помощью расширений,
           написанных на JavaScript
         </Text>
-        <Text as="p" size="xl" lineHeight="m" weight="bold">
-          Для дизайна
-        </Text>
-        <Text as="p" size="xl" lineHeight="m">
-          <Text as="span" weight="bold">
-            Figma
-          </Text>{' '}
-          — инструмент для разработки интерфейсов и прототипирования
-        </Text>
       </>
     ),
   },
@@ -146,12 +135,6 @@ export const questions = [
   {
     title: 'Как использовать дизайн-систему?',
     answer: () => {
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const [libLink] = useLink({
-        to: routesNames.LIBS_LIB,
-        params: { lib: 'uikit' },
-      });
-
       return (
         <>
           <Text
@@ -174,37 +157,6 @@ export const questions = [
             Eсли по каким-то причинам наши наработки вы использовать не можете.
             Например, разрабатываете мобильное приложение. В этом случае
             дизайн-систему можно использовать как гайдлайн.
-          </Text>
-          <Text as="p" size="xl" lineHeight="m" weight="bold">
-            Использовать все возможности
-          </Text>
-          <Text
-            as="p"
-            size="xl"
-            lineHeight="m"
-            className="decorator decorator_indent-b_m"
-          >
-            Если вы запускаете веб-проект и готовы вести разработку на React,
-            разработчики могут{' '}
-            <Text as="a" view="link" href={libLink} target="_blank">
-              подключить нашу библиотеку
-            </Text>{' '}
-            с элементами интерфейса. Если нет, дизайнеры могут собрать макет
-            интерфейса на основе{' '}
-            <Text as="a" view="link" href={constaFigma} target="_blank">
-              шаблонов в Figma
-            </Text>
-            .
-          </Text>
-          <Text as="p" size="xl" lineHeight="m" weight="bold">
-            Дополнять и дорабатывать
-          </Text>
-          <Text as="p" size="xl" lineHeight="m">
-            Всё в открытом доступе. Вы можете посмотреть{' '}
-            <Text as="a" view="link" href={constaGitHub} target="_blank">
-              исходный код нашей библиотеки на GitHub
-            </Text>{' '}
-            и предложить изменения.
           </Text>
         </>
       );
@@ -258,41 +210,6 @@ export const questions = [
     ),
   },
   {
-    title: 'Как принять участие в разработке?',
-    answer: () => {
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const [link] = useLink({
-        to: routesNames.LIBS_LIB_STAND,
-        params: { lib: 'portal', stand: 'custom-contribute' },
-      });
-
-      return (
-        <>
-          <Text
-            as="p"
-            size="xl"
-            lineHeight="m"
-            className="decorator decorator_indent-b_m"
-          >
-            Очень просто: дизайн-система в публичном репозитории на GitHub, вы
-            можете прислать заявку на изменения или даже сделать доработку.
-          </Text>
-          <Text
-            as="a"
-            view="link"
-            href={link}
-            target="_blank"
-            size="xl"
-            lineHeight="m"
-            display="block"
-          >
-            Как это сделать
-          </Text>
-        </>
-      );
-    },
-  },
-  {
     title: 'В какой момент её лучше подключать?',
     answer: () => (
       <Text
@@ -330,10 +247,6 @@ export const questions = [
           className="decorator decorator_indent-b_m"
         >
           <li>Менеджер или заказчик ставит задачу на создание продукта</li>
-          <li>
-            Дизайнеры создают макет — из компонентов дизайн-системы, на основе
-            наших шаблонов в Figma.
-          </li>
           <li>
             Разработчики собирают интерфейс на основе макета — берут компоненты
             из npm пакета{' '}

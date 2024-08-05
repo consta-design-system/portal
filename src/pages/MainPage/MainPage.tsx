@@ -8,7 +8,6 @@ import { About } from '##/pages/MainPage/About';
 import { FAQ } from '##/pages/MainPage/FAQ';
 import { Footer } from '##/pages/MainPage/Footer';
 import { HeroScreen } from '##/pages/MainPage/HeroScreen';
-import { Links } from '##/pages/MainPage/Links';
 import { Showroom } from '##/pages/MainPage/Showroom';
 import { Themes } from '##/pages/MainPage/Themes';
 import { Variety } from '##/pages/MainPage/Variety';
@@ -27,7 +26,7 @@ export const MainPage: React.FC = () => (
     <Variety />
     <Showroom />
     <FAQ />
-    <Links />
+
     <Footer />
   </App>
 );

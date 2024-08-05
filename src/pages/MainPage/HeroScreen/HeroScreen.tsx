@@ -1,17 +1,11 @@
 /* eslint-disable camelcase */
 import './HeroScreen.css';
 
-import { useLink } from '@consta/stand/src/hooks/useLink';
-import { routesNames } from '@consta/stand/src/modules/router';
-import { Button } from '@consta/uikit/Button';
 import { Text } from '@consta/uikit/Text';
-import { useBreakpoints } from '@consta/uikit/useBreakpoints';
 import { useAction } from '@reatom/npm-react';
 import React, { useEffect, useRef } from 'react';
 
 import { Picture } from '##/components/Picture/Picture';
-import IconFigma from '##/icons/FigmaMono.icon.svg';
-import IconGithub from '##/icons/Github.icon.svg';
 import ConstaLogo from '##/images/ConstaLogo.image.svg';
 import AltHeroImage_375_1x_dark from '##/images/HeroImage/Alt/Dark/HeroImage_375_1x.jpg';
 import AltHeroImage_375_2x_dark from '##/images/HeroImage/Alt/Dark/HeroImage_375_2x.jpg';
@@ -67,7 +61,6 @@ import GPNHeroImage_375_3x_display from '##/images/HeroImage/GPN/Display/HeroIma
 import GPNHeroImage_720_1x_display from '##/images/HeroImage/GPN/Display/HeroImage_720_1x.jpg';
 import GPNHeroImage_720_2x_display from '##/images/HeroImage/GPN/Display/HeroImage_720_2x.jpg';
 import GPNHeroImage_720_3x_display from '##/images/HeroImage/GPN/Display/HeroImage_720_3x.jpg';
-import { constaGitHub, contsaCommunityFigma } from '##/modules/api/links';
 import { fixedAtom } from '##/modules/header';
 import { cn } from '##/utils/bem';
 
@@ -76,14 +69,6 @@ const cnHeroScreen = cn('HeroScreen');
 export const HeroScreen: React.FC = () => {
   const setFixedHeader = useAction(fixedAtom);
   const ref = useRef<HTMLDivElement>(null);
-  const [componentsLink, componentsOnClick] = useLink({
-    to: routesNames.LIBS,
-  });
-  const breakpoints = useBreakpoints({
-    map: { bigPhone: 400 },
-    isActive: true,
-  });
-  const buttonSize = breakpoints.bigPhone ? 'l' : 'm';
 
   useEffect(() => {
     const listner = () => {
@@ -122,40 +107,6 @@ export const HeroScreen: React.FC = () => {
               Дизайн‑система для быстрой разработки интерфейсов
             </Text>
           </Text>
-          <div className={cnHeroScreen('Links')}>
-            <div className="decorator decorator_distribute_left">
-              <Button
-                as="a"
-                href={componentsLink}
-                onClick={componentsOnClick}
-                target="_blank"
-                label="Компоненты"
-                size={buttonSize}
-                className="decorator decorator_indent-r_xs"
-              />
-              <Button
-                as="a"
-                href={contsaCommunityFigma}
-                target="_blank"
-                label="Figma"
-                size={buttonSize}
-                view="secondary"
-                iconLeft={IconFigma}
-                onlyIcon
-                className="decorator decorator_indent-r_xs"
-              />
-              <Button
-                as="a"
-                href={constaGitHub}
-                target="_blank"
-                label="GitHub"
-                size={buttonSize}
-                view="secondary"
-                iconLeft={IconGithub}
-                onlyIcon
-              />
-            </div>
-          </div>
         </div>
 
         <Picture
