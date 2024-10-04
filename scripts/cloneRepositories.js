@@ -25,6 +25,7 @@ const repos = [
   'theme-constructor',
   'react-slick-adapter',
   'themes',
+  'table',
 ];
 
 const clone = async (repoName) => {

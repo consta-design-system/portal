@@ -31,6 +31,7 @@ const repos = [
   'react-slick-adapter',
   'theme-constructor',
   'themes',
+  'table',
 ];
 
 const repositoriesTsRules = (repos) => {
