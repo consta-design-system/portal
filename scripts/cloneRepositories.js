@@ -24,13 +24,23 @@ const repos = [
   'icons',
   'theme-constructor',
   'react-slick-adapter',
+  'themes',
+  'table',
 ];
 
 const clone = async (repoName) => {
   console.log(`cloning ${repoName}`);
-  await execAsync(
-    `git clone -b master https://github.com/consta-design-system/${repoName}.git ./repositories/${repoName}`,
-  );
+
+  try {
+    await execAsync(
+      `git clone -b master https://github.com/consta-design-system/${repoName}.git ./repositories/${repoName}`,
+    );
+  } catch (err) {
+    console.warn(`cloning ${repoName} failed`);
+    console.error(err);
+    await remove(`./repositories/${repoName}`);
+    await clone(repoName);
+  }
 };
 
 class GenerateCommand extends Command {
