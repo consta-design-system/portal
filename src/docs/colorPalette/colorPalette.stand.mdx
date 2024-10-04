@@ -51,21 +51,9 @@ import { MdxMenu } from '@consta/stand';
 
 # Как настроить палитру
 
-По умолчанию в дизайн-системе Consta доступно три цветовые схемы: светлая (Default), тёмная (Dark) и акцентная (Display). За каждую отвечает свой макет в Figma и CSS-файл.
-
-<MdxCollapse label="Figma">
-
-- [Consta Default Colors](https://www.figma.com/community/file/855572288089401017/consta-default-colors)
-- [Consta Dark Colors](https://www.figma.com/community/file/855572445137814202/consta-dark-colors)
-- [Consta Display Colors](https://www.figma.com/community/file/855572769860808379/consta-display-colors)
+По умолчанию в дизайн-системе Consta доступно три цветовые схемы: светлая (Default), тёмная (Dark) и акцентная (Display).
 
 </MdxCollapse>
-
-<MdxCollapse label="GitHub">
-
-- [Theme_color_gpnDefault.css](https://github.com/consta-design-system/uikit/blob/master/src/components/Theme/_color/Theme_color_gpnDefault.css)
-- [Theme_color_gpnDark.css](https://github.com/consta-design-system/uikit/blob/master/src/components/Theme/_color/Theme_color_gpnDark.css)
-- [Theme_color_gpnDisplay.css](https://github.com/consta-design-system/uikit/blob/master/src/components/Theme/_color/Theme_color_gpnDisplay.css)
 
 </MdxCollapse>
 
@@ -76,7 +64,6 @@ import { MdxMenu } from '@consta/stand';
 > Этот способ будет полезен:
 >
 > - разработчикам,
-> - дизайнерам на этапе просмотра составных цветов и переноса их значений в Figma.
 
 Проще всего создать свою цветовую палитру в [Конструкторе тем](##THEME_CONSTRUCTOR). Так вы сможете отслеживать результат изменений в режиме реального времени и скачивать темы с нужными цветами в формате CSS или JSON.
 
@@ -86,26 +73,21 @@ import { MdxMenu } from '@consta/stand';
 
 ### Разработчикам
 
-1. Выберите тему, которую хотите кастомизировать: [светлую](https://github.com/consta-design-system/uikit/blob/master/src/components/Theme/_color/Theme_color_gpnDefault.css), [темную](https://github.com/consta-design-system/uikit/blob/master/src/components/Theme/_color/Theme_color_gpnDark.css) или [акцентную](https://github.com/consta-design-system/uikit/blob/master/src/components/Theme/_color/Theme_color_gpnDisplay.css).
-2. Скачайте файл с выбранной темой с GitHub.
-3. Определите базовые цвета.
-4. Запишите коды базовых цветов в соответствующий CSS-файл.
-5. Значения дополнительных цветов внутри CSS-класса рассчитаются с помощью [postcss-color-function](https://github.com/postcss/postcss-color-function) и [postcss-simple-vars](https://github.com/postcss/postcss-simple-vars).
+1. 2. 3. Определите базовые цвета.
+2. Запишите коды базовых цветов в соответствующий CSS-файл.
+3.
 
 ### Дизайнерам
 
-1. Выберите тему, которую нужно кастомизировать: [светлую](https://www.figma.com/community/file/855572288089401017/consta-default-colors), [темную](https://www.figma.com/community/file/855572445137814202/consta-dark-colors) или [акцентную](https://www.figma.com/community/file/855572769860808379/consta-display-colors)..
-2. Создайте копию файла библиотеки в Figma.
-3. Определите базовые цвета.
-   <div>
-     {' '}
-     > Составные цвета в макете Figma не будут изменены автоматически. Чтобы посмотреть
-     составные цвета, воспользуйтесь [конструктором тем](##THEME_CONSTRUCTOR).
-   </div>
-4. Отредактируйте стиль каждого цветового значения в соответствии с рассчитанными в конструкторе значениями.
-5. Напишите коды базовых цветов разработчику или самостоятельно пропишите их в соответствующий CSS-файл.
-6. Значения дополнительных цветов внутри CSS-класса рассчитаются с помощью [postcss-color-function](https://github.com/postcss/postcss-color-function) и [postcss-simple-vars](https://github.com/postcss/postcss-simple-vars).
-7. Готово, вы создали цветовую палитру для вашего проекта.
+1. 2. 3. Определите базовые цвета.
+         {' '}
+         <div>
+           {' '}
+           Чтобы посмотреть составные цвета, воспользуйтесь [конструктором тем](##THEME_CONSTRUCTOR).
+         </div>
+2. Отредактируйте стиль каждого цветового значения в соответствии с рассчитанными в конструкторе значениями.
+3. Напишите коды базовых цветов разработчику или самостоятельно пропишите их в соответствующий CSS-файл.
+4. 7. Готово, вы создали цветовую палитру для вашего проекта.
 
 # Полезные ссылки
 
