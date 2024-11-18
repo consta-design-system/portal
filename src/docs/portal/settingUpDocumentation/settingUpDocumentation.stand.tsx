@@ -1,8 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Форматирование текста',
-  id: 'formatting-rules',
+  title: 'Работа с документацией',
+  id: 'settin-up-documentation',
   group: 'portal',
-  order: 810,
+  order: 870,
 });

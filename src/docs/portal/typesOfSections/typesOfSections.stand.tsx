@@ -1,8 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Структура документации',
-  id: 'documentation-structure',
+  title: 'Виды разделов',
+  id: 'types-of-sections',
   group: 'portal',
-  order: 830,
+  order: 880,
 });
