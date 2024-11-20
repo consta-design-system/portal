@@ -1,8 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Руководство по оформлению веток и коммитов',
-  id: 'making-branches-and-commits',
+  title: 'Работа с Git',
+  id: 'work-with-git',
   group: 'portal',
   order: 860,
 });
