@@ -2,6 +2,7 @@ import { MdxTabs } from '@consta/stand';
 import { MdxMenu } from '@consta/stand';
 import { MdxImage } from '@consta/stand';
 import { MdxCollapse } from '@consta/stand';
+import { MdxInformer } from '@consta/stand';
 import example from './images/example.png';
 import { TextExampleName } from './examples/FormattingRulesExampleName/FormattingRulesExampleName.tsx';
 
@@ -23,6 +24,7 @@ import { TextExampleName } from './examples/FormattingRulesExampleName/Formattin
 - [Таблицы](#таблицы)
 - [Блоки кода](#блоки-кода)
 - [Изображения](#изображения)
+- [Примечание](#примечание)
 - [Раскрывающиеся блоки](#раскрывающиеся-блоки)
 - [Пример компонента](#пример-компонента)
 - [Табы](#табы)
@@ -383,6 +385,107 @@ import example from './images/example.jpg'; //импорт самого изоб
 <>
 
 <MdxImage src={example} />
+
+</>
+</MdxTabs>
+
+## Примечание
+
+Заметка — это выделяющийся блок с важной информацией.
+
+Чтобы использовать примечание:
+
+1. Импортируйте компонент примечания:
+
+```jsx
+import { MdxInformer } from '@consta/stand/src/componets/MdxCollapse';
+```
+
+2. Вставьте примечание в контент:
+
+```markdown
+<MdxInformer status="normal" label="При переключении основной темы вложенная тема не поменяется." />
+```
+
+В зависимости от содержания используют заметки с различными заголовками и оформлением. Всего 4 типа заметок:
+
+- **Совет** – рекомендация.
+
+<MdxTabs labels = {['markdown', 'demo']} view = "clear">
+<>
+
+```markdown
+<MdxInformer status="success" label="Если на проекте нет дизайнера, используйте дизайн-систему как брендбук. Размеры, цвета и другие параметры можно взять из библиотек Consta в Figma." />
+```
+
+</>
+
+<>
+
+<MdxInformer
+  status="success"
+  label="Если на проекте нет дизайнера, используйте дизайн-систему как брендбук. Размеры, цвета и другие параметры можно взять из библиотек Consta в Figma."
+/>
+
+</>
+</MdxTabs>
+
+- **Примечание** – дополнительная информация. Тип по умолчанию.
+
+<MdxTabs labels = {['markdown', 'demo']} view = "clear">
+<>
+
+```markdown
+<MdxInformer status="normal" label="При переключении основной темы вложенная тема не поменяется." />
+```
+
+</>
+
+<>
+
+<MdxInformer
+  status="normal"
+  label="При переключении основной темы вложенная тема не поменяется."
+/>
+
+</>
+</MdxTabs>
+
+- **Предупреждение** – предостережение.
+
+<MdxTabs labels = {['markdown', 'demo']} view = "clear">
+<>
+
+```markdown
+<MdxInformer status="warning" label="Мы не поддерживаем Internet Explorer и старую версию Edge." />
+```
+
+</>
+
+<>
+
+<MdxInformer status="warning" label="Решение о приоритизации задач ." />
+
+</>
+</MdxTabs>
+
+- **Внимание** – ограничение.
+
+<MdxTabs labels = {['markdown', 'demo']} view = "clear">
+<>
+
+```markdown
+<MdxInformer status="alert" label="Назначить нового автора страницы может ее действующий автор или администратор организации." />
+```
+
+</>
+
+<>
+
+<MdxInformer
+  status="alert"
+  label="Назначить нового автора страницы может ее действующий автор или администратор организации."
+/>
 
 </>
 </MdxTabs>
