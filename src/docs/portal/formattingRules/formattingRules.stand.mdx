@@ -67,7 +67,10 @@ import { TextExampleName } from './examples/FormattingRulesExampleName/Formattin
 
 В Consta заголовок первого уровня задается в файле .tsx. Чтобы разделить основные темы внутри раздела, используйте заголовок второго уровня. Подробнее о структуре файлов читай на странице.
 
-> Рекомендуем не использовать заголовки ниже третьего уровня. Если нужно больше, имеет смысл декомпозировать саму страницу.
+<MdxInformer status="warning">
+  Рекомендуем не использовать заголовки ниже третьего уровня. Если нужно больше,
+  имеет смысл декомпозировать саму страницу.
+</MdxInformer>
 
 ## Выделение текста
 
@@ -238,7 +241,9 @@ import { TextExampleName } from './examples/FormattingRulesExampleName/Formattin
 </>
 </MdxTabs>
 
-> Избегайте излишнего использования вложенных списков.
+<MdxInformer status="warning">
+  Избегайте излишнего использования вложенных списков.
+</MdxInformer>
 
 ## Ссылки
 
@@ -398,13 +403,15 @@ import example from './images/example.jpg'; //импорт самого изоб
 1. Импортируйте компонент примечания:
 
 ```jsx
-import { MdxInformer } from '@consta/stand/src/componets/MdxCollapse';
+import { MdxInformer } from '@consta/stand';
 ```
 
 2. Вставьте примечание в контент:
 
 ```markdown
-<MdxInformer status="normal" label="При переключении основной темы вложенная тема не поменяется." />
+<MdxInformer status="normal">
+  При переключении основной темы вложенная тема не поменяется.
+</MdxInformer>
 ```
 
 В зависимости от содержания используют заметки с различными заголовками и оформлением. Всего 4 типа заметок:
@@ -415,17 +422,19 @@ import { MdxInformer } from '@consta/stand/src/componets/MdxCollapse';
 <>
 
 ```markdown
-<MdxInformer status="success" label="Если на проекте нет дизайнера, используйте дизайн-систему как брендбук. Размеры, цвета и другие параметры можно взять из библиотек Consta в Figma." />
+<MdxInformer status="success">
+  Если на проекте нет дизайнера, используйте дизайн-систему как брендбук. Размеры, цвета и другие параметры можно взять из библиотек Consta в Figma.
+</MdxInformer>
 ```
 
 </>
 
 <>
 
-<MdxInformer
-  status="success"
-  label="Если на проекте нет дизайнера, используйте дизайн-систему как брендбук. Размеры, цвета и другие параметры можно взять из библиотек Consta в Figma."
-/>
+<MdxInformer status="success">
+  Если на проекте нет дизайнера, используйте дизайн-систему как брендбук.
+  Размеры, цвета и другие параметры можно взять из библиотек Consta в Figma.
+</MdxInformer>
 
 </>
 </MdxTabs>
@@ -436,16 +445,18 @@ import { MdxInformer } from '@consta/stand/src/componets/MdxCollapse';
 <>
 
 ```markdown
-<MdxInformer status="normal" label="При переключении основной темы вложенная тема не поменяется." />
+<MdxInformer status="normal">
+  При переключении основной темы вложенная тема не поменяется.
+</MdxInformer>
 ```
 
 </>
 
 <>
 
-<MdxInformer
-  status="normal"
-  label="При переключении основной темы вложенная тема не поменяется."
+<MdxInformer status="normal">
+  При переключении основной темы вложенная тема не поменяется.
+</MdxInformer>
 />
 
 </>
@@ -457,14 +468,18 @@ import { MdxInformer } from '@consta/stand/src/componets/MdxCollapse';
 <>
 
 ```markdown
-<MdxInformer status="warning" label="Мы не поддерживаем Internet Explorer и старую версию Edge." />
+<MdxInformer status="warning">
+  Мы не поддерживаем Internet Explorer и старую версию Edge.
+</MdxInformer>
 ```
 
 </>
 
 <>
 
-<MdxInformer status="warning" label="Решение о приоритизации задач ." />
+<MdxInformer status="warning">
+  Мы не поддерживаем Internet Explorer и старую версию Edge.
+</MdxInformer>
 
 </>
 </MdxTabs>
@@ -475,17 +490,19 @@ import { MdxInformer } from '@consta/stand/src/componets/MdxCollapse';
 <>
 
 ```markdown
-<MdxInformer status="alert" label="Назначить нового автора страницы может ее действующий автор или администратор организации." />
+<MdxInformer status="alert">
+  Назначить нового автора страницы может ее действующий автор или администратор организации.
+</MdxInformer>
 ```
 
 </>
 
 <>
 
-<MdxInformer
-  status="alert"
-  label="Назначить нового автора страницы может ее действующий автор или администратор организации."
-/>
+<MdxInformer status="alert">
+  Назначить нового автора страницы может ее действующий автор или администратор
+  организации.
+</MdxInformer>
 
 </>
 </MdxTabs>
@@ -499,7 +516,7 @@ import { MdxInformer } from '@consta/stand/src/componets/MdxCollapse';
 1. Импортируйте компонент коллапса в нужный документ:
 
 ```jsx
-import { MdxCollapse } from '@consta/stand/src/componets/MdxCollapse';
+import { MdxCollapse } from '@consta/stand';
 ```
 
 2. Вставьте раскрывающийся блок в необходимое место контента:

@@ -1,6 +1,4 @@
-import { MdxTabs } from '@consta/stand';
-import { MdxMenu } from '@consta/stand';
-import { MdxImage } from '@consta/stand'; //код для импорта изображений
+import { MdxTabs, MdxMenu, MdxImage, MdxInformer } from '@consta/stand';
 import description from './images/description.png';
 import section from './images/section.png';
 import structure from './images/structure.png';
@@ -31,7 +29,10 @@ import tabs from './images/tabs.png';
 - [table](https://github.com/consta-design-system/table). Библиотека компонентов для таблицы.
 - [themes](https://github.com/consta-design-system/themes). Библиотека готовых тем.
 
-> Это самые популярные библиотеки. Полный список библиотек смотрите в [GitHub](https://github.com/orgs/consta-design-system/repositories?type=all).
+<MdxInformer status="normal">
+  Это самые популярные библиотеки. Полный список библиотек смотрите в
+  [GitHub](https://github.com/orgs/consta-design-system/repositories?type=all).
+</MdxInformer>
 
 ### Где хранится документация
 
@@ -147,7 +148,10 @@ export default createStand({
 - `group` – группа (раздел), к которой принадлежит страница. Все группы разделов можно посмотреть в папке `stand` в файле `standConfig.ts`.
 - `order` – порядок отображения страницы на портале. Так, чтобы отобразить страницу в первом разделе второй, задайте значение `120`.
 
-> Компоненты и адаптеры в идут в алфавитном порядке. Для них задавать `order` не нужно.
+<MdxInformer status="normal">
+  Компоненты и адаптеры в идут в алфавитном порядке. Для них задавать `order` не
+  нужно.
+</MdxInformer>
 
 - `alias` – ключевые слова для поиска по порталу.
 - `description` – краткое описание содержимого страницы. Отображается под заголовком страницы.
