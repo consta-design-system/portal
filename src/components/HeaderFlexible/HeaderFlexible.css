@@ -40,10 +40,11 @@
 
     & .portal--Header {
       &-Logo {
+        display: flex;
+        align-items: center;
         width: 100%;
         max-width: 120px;
         font-size: 0;
-        transform: translateY(-4%);
       }
 
       &-Link {

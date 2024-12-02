@@ -10,16 +10,6 @@
     padding: var(--space-m) var(--space-4xl);
   }
 
-  &-Logo {
-    width: 100%;
-    max-width: 200px;
-    transform: translateY(-10%);
-
-    @media (min-width: 600px) {
-      max-width: 264px;
-    }
-  }
-
   &-Menu {
     display: flex;
     align-content: flex-end;
