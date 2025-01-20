@@ -4,5 +4,5 @@ export default createStand({
   title: 'Работа с Порталом',
   id: 'configuring-portal',
   group: 'portal',
-  order: 870,
+  order: 810,
 });

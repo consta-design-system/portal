@@ -4,5 +4,5 @@ export default createStand({
   title: 'Виды разделов',
   id: 'types-of-sections',
   group: 'portal',
-  order: 880,
+  order: 830,
 });

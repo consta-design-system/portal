@@ -4,5 +4,5 @@ export default createStand({
   title: 'Глоссарий',
   id: 'glossary',
   group: 'portal',
-  order: 890,
+  order: 860,
 });

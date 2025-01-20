@@ -4,5 +4,5 @@ export default createStand({
   title: 'Форматирование текста',
   id: 'formatting-rules',
   group: 'portal',
-  order: 850,
+  order: 820,
 });

@@ -1,8 +1,8 @@
 import { createStand } from '##/stand/standConfig';
 
 export default createStand({
-  title: 'Структура Портала',
+  title: 'Как устроен портал',
   id: 'portal-structure',
   group: 'portal',
-  order: 840,
+  order: 800,
 });
