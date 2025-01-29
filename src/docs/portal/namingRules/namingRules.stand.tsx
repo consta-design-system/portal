@@ -4,5 +4,5 @@ export default createStand({
   title: 'Соглашение об именах',
   id: 'naming-rules',
   group: 'portal',
-  order: 850,
+  order: 840,
 });
