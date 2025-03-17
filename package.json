@@ -1,6 +1,6 @@
 {
   "name": "@consta/portal",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "licenses": [
     {
       "type": "MIT",
@@ -205,9 +205,9 @@
     "@types/react-slick": "^0.23.10",
     "@types/resize-observer-browser": "0.1.2",
     "@types/uuid": "^8.3.4",
-    "ag-grid-community": "^30.0.0",
-    "ag-grid-enterprise": "^30.0.0",
-    "ag-grid-react": "^30.0.0",
+    "ag-grid-community": "^33.0.4",
+    "ag-grid-enterprise": "^33.0.4",
+    "ag-grid-react": "^33.0.4",
     "color": "^4.2.3",
     "compute-scroll-into-view": "^1.0.17",
     "d3": "5.12.0",
