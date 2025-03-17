@@ -139,7 +139,7 @@ import { createStand } from '##/stand/standConfig';
 
 export default createStand({
   title: 'О дизайн-системе',
-  id: 'aboutConsta',
+  id: 'about-consta',
   group: 'startwork',
   order: 120,
   alias: ['теория', 'дизайн-система', 'зачем'],
@@ -151,6 +151,13 @@ export default createStand({
 
 - `title` – заголовок страницы. Он будет отображаться вверху страницы в качестве заголовка H1.
 - `id` – id страницы. Используется при создании URL.
+
+<MdxInformer status="warning">
+
+В поле `id` используйте `kebab-case`. Так вы сможете обеспечить удобство восприятия в URL страницы.
+
+</MdxInformer>
+
 - `group` – группа, к которой принадлежит страница. Все группы разделов можно посмотреть в папке `stand` в файле `standConfig.ts`.
 - `order` – порядок отображения страницы на портале. Так, чтобы отобразить страницу в первом разделе второй, задайте значение `120`.
 - `alias` – ключевые слова для поиска по порталу.
@@ -165,7 +172,7 @@ import { createStand } from '##/stand/standConfig';
 
 export default createStand({
   title: 'DragNDropField',
-  id: 'DragNDropFieldCanary',
+  id: 'DragNDropField',
   group: 'components',
   description:
     'Компонент позволяет загружать файлы путем перетаскивания или через диалоговое окно',
