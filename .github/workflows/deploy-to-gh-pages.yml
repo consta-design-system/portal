@@ -25,6 +25,7 @@ env:
   BUILD_SCRIPT: yarn stand:build
   BUILD_SCRIPT_OUTPUT: build
   APP_NAME: portal
+  BROWSER_HASH: true
 
 jobs:
   # Single deploy job since we're just deploying

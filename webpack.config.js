@@ -224,7 +224,7 @@ module.exports = function () {
           ],
           type: 'asset/resource',
           generator: {
-            filename: 'static/[name]__[hash:8][ext]',
+            filename: 'asset-[name]__[hash:8][ext]',
           },
         },
         {
@@ -325,6 +325,13 @@ module.exports = function () {
     },
 
     plugins: [
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(
+          process.env.NODE_ENV || 'development',
+        ),
+        'process.env.BROWSER_HASH': JSON.stringify(process.env.BROWSER_HASH),
+      }),
+
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'public', 'index.html'),
         ...(isEnvProduction
@@ -351,16 +358,18 @@ module.exports = function () {
       new webpack.ProgressPlugin(),
 
       new MiniCssExtractPlugin({
-        filename: 'static/[contenthash].css',
-        chunkFilename: 'static/[contenthash].css',
+        filename: 'main-[contenthash].css',
+        chunkFilename: 'chunk-[contenthash].css',
         ignoreOrder: true,
       }),
 
       new CssMinimizerPlugin(),
 
-      new FaviconsWebpackPlugin(
-        path.resolve(__dirname, 'public', 'favicon.svg'),
-      ),
+      new FaviconsWebpackPlugin({
+        logo: path.resolve(__dirname, 'public', 'favicon.svg'),
+        publicPath: '/',
+        prefix: '',
+      }),
     ].filter(Boolean),
 
     output: {
@@ -368,9 +377,9 @@ module.exports = function () {
       path: path.resolve(__dirname, 'build'),
       ...(isEnvProduction && {
         asyncChunks: true,
-        filename: 'static/[contenthash].js',
-        chunkFilename: 'static/[contenthash].js',
-        assetModuleFilename: 'static/media/[contenthash][ext]',
+        filename: 'main-[contenthash].js',
+        chunkFilename: 'chunk-[contenthash].js',
+        assetModuleFilename: 'asset-[contenthash][ext]',
       }),
       publicPath: '/',
     },
