@@ -1,0 +1,72 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy to gh-pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ['master']
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+env:
+  BUILD_SCRIPT: yarn stand:build
+  BUILD_SCRIPT_OUTPUT: build
+  APP_NAME: portal
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # Делаем checkout текущей ветки
+      - uses: actions/checkout@master
+      # Устанавливаем Node.JS для сборки приложения
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 22
+      - name: Install yarn
+        id: yarn-setup
+        run: |
+          yarn policies set-version 1.22.18
+          echo "::set-output name=cache_dir::$(yarn cache dir)"
+
+      - name: Настройка кэширования yarn
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.yarn-setup.outputs.cache_dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn add "install-peers-cli@https://github.com/evless/install-peers-cli#fix-yarn-policies" && yarn --frozen-lockfile
+
+      - name: Build App
+        run: $BUILD_SCRIPT
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: ./${{ env.BUILD_SCRIPT_OUTPUT }}
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
