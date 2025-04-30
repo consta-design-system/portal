@@ -1,6 +1,10 @@
-import { MdxMenu } from '@consta/stand';
+import { MdxMenu, MdxInformer } from '@consta/stand';
 
-> Сначала прочитайте всё [о темах](##LIBS.LIB.STAND/lib:portal/stand:theme-themeabout)
+<MdxInformer status="normal">
+
+Сначала рекомендуем прочитать всё [о темах](##LIBS.LIB.STAND/lib:portal/stand:theme-themeabout).
+
+</MdxInformer>
 
 <MdxMenu>
 
@@ -64,7 +68,11 @@ pathToPresets/
 
 Настройте переменные в CSS (их иногда называют _дизайн-токенами_). За образец можно взять CSS-файлы из [компонента Theme](https://github.com/consta-design-system/uikit/tree/master/src/components/Theme).
 
-> Лучше давать переменным семантические имена, так их проще контролировать и применять
+<MdxInformer status="success">
+
+Рекомендуем давать переменным семантические имена, так их проще контролировать и применять.
+
+</MdxInformer>
 
 ### Цвета \_color
 
@@ -93,10 +101,11 @@ pathToPresets/
 
 Для каждого уникального шрифта нужно создать отдельный CSS-файл в папке `_font`.
 
-> Проверьте, что в шрифте есть насыщенность, которую вы используете.
-> Браузер имитирует насыщенность, которой нет в наборе, но неизвестно, как это будет выглядеть.
->
-> [Посмотреть варианты насыщенности в компоненте `Text`](##LIBS.LIB.STAND.TAB/lib:uikit/stand:components-text-stable/tab:dev/hash:насыщенность)
+<MdxInformer status="success">
+
+Убедитесь, что в шрифте есть насыщенность, которую вы используете. Браузер имитирует насыщенность, которой нет в наборе, но неизвестно, как это будет выглядеть.
+
+</MdxInformer>
 
 ### Размер шрифта и междустрочный интервал \_size
 
