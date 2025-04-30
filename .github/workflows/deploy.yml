@@ -35,7 +35,7 @@ jobs:
           echo "::set-output name=cache_dir::$(yarn cache dir)"
 
       - name: Настройка кэширования yarn
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ${{ steps.yarn-setup.outputs.cache_dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -53,7 +53,7 @@ jobs:
           echo "BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//-/g' | sed 's/\./_/g')" >> $GITHUB_ENV
 
       # Собираем приложение
-      - name: Build Appliction
+      - name: Build App
         run: $BUILD_SCRIPT
       # Доставляем собранное приложение на сервер
       - name: Deploy to Server
