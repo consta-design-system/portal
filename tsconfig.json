@@ -25,7 +25,12 @@
       { "transform": "typescript-transform-paths", "afterDeclarations": true }
     ]
   },
-  "include": ["src/**/*", "scripts/**/*"],
+  "include": [
+    "src/**/*",
+    "scripts/**/*",
+    "src/docs/portal/documentationStructure/.stand.tsx",
+    "src/docs/portal/documentationStructure/.stand.tsx"
+  ],
   "exclude": [
     "node_modules",
     "**/node_modules/*",
